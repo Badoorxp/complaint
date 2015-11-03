@@ -1,0 +1,97 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:2:1-63:12
+	package
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:3:5-36
+	android:versionName
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:5:5-30
+	android:versionCode
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:4:5-28
+		INJECTED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml
+		INJECTED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:7:5-9:41
+	android:targetSdkVersion
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:9:9-38
+	android:minSdkVersion
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:8:9-35
+application
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:11:5-61:19
+	android:label
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:14:9-41
+	android:allowBackup
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:12:9-35
+	android:icon
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:13:9-45
+	android:theme
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:15:9-40
+activity#com.example.complaint.MainActivity
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:16:9-24:20
+	android:label
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:18:13-45
+	android:name
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:17:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:19:13-23:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:22:27-74
+activity#com.example.complaint.Newcomp
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:25:9-33:20
+	android:label
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:27:13-59
+	android:name
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:26:13-36
+intent-filter#android.intent.category.DEFALTE+next
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:28:16-32:29
+action#next
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:29:17-47
+	android:name
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:29:25-44
+category#android.intent.category.DEFALTE
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:31:17-76
+	android:name
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:31:27-73
+activity#com.example.complaint.Newcomplaint
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:34:9-42:20
+	android:label
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:36:13-64
+	android:name
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:35:13-41
+intent-filter#android.intent.category.DEFALTE+newcomplaint
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:37:16-41:29
+action#newcomplaint
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:38:17-55
+	android:name
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:38:25-52
+activity#com.example.complaint.Selectimage
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:43:9-51:20
+	android:label
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:45:13-63
+	android:name
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:44:13-40
+intent-filter#android.intent.category.DEFALTE+selectimage
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:46:19-50:29
+action#selectimage
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:47:17-54
+	android:name
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:47:25-51
+activity#com.example.complaint.Finish
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:52:9-60:20
+	android:label
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:54:13-58
+	android:name
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:53:13-35
+intent-filter#android.intent.category.DEFALTE+finish
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:55:22-59:29
+action#finish
+ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:56:17-49
+	android:name
+		ADDED from C:\Users\Bader Bushnaq\Desktop\complaint\AndroidManifest.xml:56:25-46

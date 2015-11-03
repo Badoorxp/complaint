@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.complaint"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.complaint.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.complaint.Newcomp"
+            android:label="@string/title_activity_newcomp" >
+            <intent-filter>
+                <action android:name="next" />
+
+                <category android:name="android.intent.category.DEFALTE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.complaint.Newcomplaint"
+            android:label="@string/title_activity_newcomplaint" >
+            <intent-filter>
+                <action android:name="newcomplaint" />
+
+                <category android:name="android.intent.category.DEFALTE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.complaint.Selectimage"
+            android:label="@string/title_activity_selectimage" >
+            <intent-filter>
+                <action android:name="selectimage" />
+
+                <category android:name="android.intent.category.DEFALTE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.complaint.Finish"
+            android:label="@string/title_activity_finish" >
+            <intent-filter>
+                <action android:name="finish" />
+
+                <category android:name="android.intent.category.DEFALTE" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
