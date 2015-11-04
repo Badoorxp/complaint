@@ -16,7 +16,7 @@
         android:layout_alignLeft="@+id/newc"
         android:layout_alignRight="@+id/newc"
         android:layout_marginBottom="22dp"
-        android:text="شكاوي جديدة" />
+        android:text="شكاوي جديدة جدا"/>
 
     <TextView
         android:id="@+id/textView1"
