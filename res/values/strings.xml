@@ -11,6 +11,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_newcomp">Newcomp</string>
     <string name="hello_world">Hello world!</string>
+    <string name="fin_b3">شكوى جديدة</string>
     <string name="title_activity_newcomplaint">Newcomplaint</string>
     <string name="title_activity_selectimage">Selectimage</string>
     <string name="title_activity_finish">Finish</string>

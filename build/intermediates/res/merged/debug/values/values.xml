@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/0/complaint/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/Bader%20Bushnaq/Desktop/complaint/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="navigation_drawer_width">240dp</dimen>
-    <!-- From: file:/C:/Users/0/complaint/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Bader%20Bushnaq/Desktop/complaint/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
@@ -20,7 +20,7 @@
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
-    <!-- From: file:/C:/Users/0/complaint/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Bader%20Bushnaq/Desktop/complaint/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
