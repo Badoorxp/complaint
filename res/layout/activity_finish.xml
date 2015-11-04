@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="22dp"
-        android:text="تمت العملية بنجاح"
+        android:text="@string/fin_text1"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
@@ -35,7 +35,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/newcom"
         android:layout_marginBottom="30dp"
-        android:text="خروج" />
+        android:text="@string/fin_b4"/>
 
     <Button
         android:id="@+id/newc"
@@ -45,7 +45,7 @@
         android:layout_alignLeft="@+id/exit"
         android:layout_alignRight="@+id/exit"
         android:layout_marginBottom="30dp"
-        android:text="عرض شكوى مطروحة" />
+        android:text="@string/fin_b2"/>
 
     <Button
         android:id="@+id/exit"
@@ -54,7 +54,7 @@
         android:layout_above="@+id/newc"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="34dp"
-        android:text="العودة الى الرئيسية" />
+        android:text="@string/fin_b1" />
 
     <ImageView
         android:id="@+id/imageView1"
