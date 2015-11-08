@@ -15,16 +15,16 @@
         android:layout_above="@+id/exitapp"
         android:layout_alignLeft="@+id/newc"
         android:layout_alignRight="@+id/newc"
-        android:layout_marginBottom="22dp"
-        android:text="شكوى جديدة"  />
+        android:layout_marginBottom="30dp"
+        android:text="@string/fin_b3"/>
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:text="تمت العملية بنجاح"
+        android:layout_marginTop="30dp"
+        android:text="@string/fin_text1"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
@@ -35,7 +35,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/newcom"
         android:layout_marginBottom="30dp"
-        android:text="خروج" />
+        android:text="@string/fin_b4"/>
 
     <Button
         android:id="@+id/newc"
@@ -45,7 +45,7 @@
         android:layout_alignLeft="@+id/exit"
         android:layout_alignRight="@+id/exit"
         android:layout_marginBottom="30dp"
-        android:text="عرض شكوى مطروحة" />
+        android:text="@string/fin_b2"/>
 
     <Button
         android:id="@+id/exit"
@@ -53,16 +53,17 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/newc"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="34dp"
-        android:text="العودة الى الرئيسية" />
+        android:layout_marginBottom="30dp"
+        android:text="@string/fin_b1" />
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="60dp"
-        android:layout_height="40dp"
+        android:layout_height="60dp"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="30dp"
+
         android:src="@drawable/download" />
 
 </RelativeLayout><!-- From: file:/C:/Users/0/complaint/res/layout/activity_finish.xml -->

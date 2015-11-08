@@ -44,4 +44,12 @@
         android:layout_marginBottom="47dp"
         android:text="تعديل" />
 
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:id="@+id/take"
+        android:layout_below="@+id/newc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
 </RelativeLayout>
