@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class Selectimage extends Activity {
 	Button takephoto;
@@ -39,7 +40,7 @@ public class Selectimage extends Activity {
 			}
 			
 		});
-		
+
 		change.setOnClickListener(new OnClickListener(){
 
 			@Override
@@ -50,8 +51,12 @@ public class Selectimage extends Activity {
 				
 				
 			}
+
+
 			
 		});
+
+
 		exit.setOnClickListener(new OnClickListener(){
 
 			@Override

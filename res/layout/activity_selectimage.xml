@@ -15,6 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
+        style="@style/btnStyleBlackpearl"
         android:text="اختيار صورة" />
 
     <Button
@@ -24,6 +25,7 @@
         android:layout_alignBaseline="@+id/newcom"
         android:layout_alignBottom="@+id/newcom"
         android:layout_centerHorizontal="true"
+        style="@style/btnStyleBlackpearl"
         android:text="رفع الشكوى" />
 
     <Button
@@ -33,6 +35,7 @@
         android:layout_alignBaseline="@+id/exitapp"
         android:layout_alignBottom="@+id/exitapp"
         android:layout_alignParentLeft="true"
+        style="@style/btnStyleBlackpearl"
         android:text="الغاء" />
 
     <Button
@@ -42,6 +45,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="47dp"
+        style="@style/btnStyleBlackpearl"
         android:text="تعديل" />
 
     <ImageView

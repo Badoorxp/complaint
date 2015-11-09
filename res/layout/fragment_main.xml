@@ -15,6 +15,7 @@
         android:layout_above="@+id/reg"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="43dp"
+        style="@style/btnStyleBlackpearl"
         android:text="شكاوي مطروحة" />
 
     <Button
@@ -24,6 +25,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="90dp"
+        style="@style/btnStyleBlackpearl"
         android:text="شكوى جديدة" />
 
     <ImageView

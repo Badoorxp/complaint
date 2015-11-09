@@ -22,8 +22,8 @@ public final class R {
         public static final int ic_launcher=0x7f020003;
     }
     public static final class id {
-        public static final int action_example=0x7f08000b;
-        public static final int action_settings=0x7f08000a;
+        public static final int action_example=0x7f08000c;
+        public static final int action_settings=0x7f08000b;
         public static final int container=0x7f080007;
         public static final int drawer_layout=0x7f080006;
         public static final int exit=0x7f080004;
@@ -32,7 +32,8 @@ public final class R {
         public static final int navigation_drawer=0x7f080008;
         public static final int newc=0x7f080002;
         public static final int newcom=0x7f080000;
-        public static final int reg=0x7f080009;
+        public static final int reg=0x7f08000a;
+        public static final int take=0x7f080009;
         public static final int textView1=0x7f080003;
     }
     public static final class layout {
