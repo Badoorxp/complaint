@@ -16,10 +16,11 @@ public final class R {
         public static final int navigation_drawer_width=0x7f050002;
     }
     public static final class drawable {
-        public static final int download=0x7f020000;
-        public static final int drawer_shadow=0x7f020001;
-        public static final int ic_drawer=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
+        public static final int custom_btn_black_pearl=0x7f020000;
+        public static final int download=0x7f020001;
+        public static final int drawer_shadow=0x7f020002;
+        public static final int ic_drawer=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
     }
     public static final class id {
         public static final int action_example=0x7f08000c;
@@ -75,7 +76,6 @@ public final class R {
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 
- API 14 theme customizations can go here. 
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
@@ -85,6 +85,7 @@ public final class R {
         public static final int AppBaseTheme=0x7f040000;
         /**  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f040001;
+        public static final int AppTheme=0x7f040002;
+        public static final int btnStyleBlackpearl=0x7f040001;
     }
 }

@@ -25,6 +25,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="38dp"
+        style="@style/btnStyleBlackpearl"
         android:text="تسجيل جديد" />
 
 </RelativeLayout>
