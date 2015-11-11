@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="17"
-        android:targetSdkVersion="19" />
+        android:minSdkVersion="19"
+        android:targetSdkVersion="23" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -29,38 +29,23 @@
         <activity
             android:name="com.example.complaint.Newcomp"
             android:label="@string/title_activity_newcomp" >
-            <intent-filter>
-                <action android:name="next" />
-
-                <category android:name="android.intent.category.DEFALTE" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.example.complaint.Newcomplaint"
             android:label="@string/title_activity_newcomplaint" >
-            <intent-filter>
-                <action android:name="newcomplaint" />
-
-                <category android:name="android.intent.category.DEFALTE" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.example.complaint.Selectimage"
             android:label="@string/title_activity_selectimage" >
             <intent-filter>
-                <action android:name="selectimage" />
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.DEFALTE" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.complaint.Finish"
             android:label="@string/title_activity_finish" >
-            <intent-filter>
-                <action android:name="finish" />
-
-                <category android:name="android.intent.category.DEFALTE" />
-            </intent-filter>
         </activity>
     </application>
 

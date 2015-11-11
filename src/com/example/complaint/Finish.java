@@ -25,7 +25,7 @@ public class Finish extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent i=new Intent("newcomplaint");
+				Intent i=new Intent(Finish.this,Newcomplaint.class);
 				startActivity(i);
 				
 				

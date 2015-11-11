@@ -52,11 +52,12 @@
 
     <Button
         android:id="@+id/exit"
-        android:layout_width="200dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/newc"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
+
         style="@style/btnStyleBlackpearl"
         android:text="@string/fin_b1" />
 
