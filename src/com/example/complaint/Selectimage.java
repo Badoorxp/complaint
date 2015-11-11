@@ -1,5 +1,6 @@
 package com.example.complaint;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -31,6 +32,7 @@ public class Selectimage extends Activity {
 		Button change=(Button)findViewById(R.id.newcom);
 		Button exit=(Button)findViewById(R.id.exit);
 		takephoto.setOnClickListener(new takephotoClicker());
+
 
 		send.setOnClickListener(new OnClickListener(){
 
@@ -95,6 +97,6 @@ public class Selectimage extends Activity {
 		public void onClick(View v) {
 			Intent cameraintent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 			startActivityForResult(cameraintent,CAM_REQUEST);
-
+		finish();
 	}}
 }
