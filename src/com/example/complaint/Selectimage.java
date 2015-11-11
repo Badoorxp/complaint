@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -69,10 +70,10 @@ public class Selectimage extends Activity {
 			public void onClick(View v) {
 
 
-				
-				
+
+
 			}
-			
+
 		});
 	}
 
@@ -97,6 +98,8 @@ public class Selectimage extends Activity {
 		public void onClick(View v) {
 			Intent cameraintent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 			startActivityForResult(cameraintent,CAM_REQUEST);
-		finish();
-	}}
+
+	}
+	}
+
 }
