@@ -2,12 +2,14 @@ package com.example.complaint;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Finish extends Activity {
 
@@ -18,7 +20,7 @@ public class Finish extends Activity {
 		Button newcomp=(Button)findViewById(R.id.newcom);
 		Button goback=(Button)findViewById(R.id.exit);
 		Button exit=(Button)findViewById(R.id.exitapp);
-		
+
 		
 		newcomp.setOnClickListener(new OnClickListener(){
 

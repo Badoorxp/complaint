@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.complaint.Finish" >
+    tools:context="com.example.complaint.Finish"
+    android:background="@drawable/background">
 
     <Button
         android:id="@+id/newcom"
@@ -16,7 +17,8 @@
         android:layout_alignLeft="@+id/newc"
         android:layout_alignRight="@+id/newc"
         android:layout_marginBottom="30dp"
-        style="@style/btnStyleBlackpearl"
+        android:background="@color/green"
+        android:drawableRight="@drawable/upload"
         android:text="@string/fin_b3"/>
 
     <TextView
@@ -36,7 +38,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/newcom"
         android:layout_marginBottom="30dp"
-        style="@style/btnStyleBlackpearl"
+        android:background="@color/green"
+       android:drawableRight="@drawable/logout"
         android:text="@string/fin_b4"/>
 
     <Button
@@ -47,7 +50,8 @@
         android:layout_alignLeft="@+id/exit"
         android:layout_alignRight="@+id/exit"
         android:layout_marginBottom="30dp"
-        style="@style/btnStyleBlackpearl"
+        android:background="@color/green"
+       android:drawableRight="@drawable/menu"
         android:text="@string/fin_b2"/>
 
     <Button
@@ -57,18 +61,19 @@
         android:layout_above="@+id/newc"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
+        android:drawableRight="@drawable/home"
 
-        style="@style/btnStyleBlackpearl"
+        android:background="@color/green"
         android:text="@string/fin_b1" />
 
     <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:src="@drawable/ttt"
+        android:layout_marginTop="34dp" />
 
-        android:src="@drawable/download" />
 
 </RelativeLayout>

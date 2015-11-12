@@ -49,11 +49,11 @@
         android:text="تعديل" />
 
     <ImageView
-        android:layout_width="fill_parent"
+        android:layout_width="300dp"
         android:layout_height="200dp"
         android:id="@+id/take"
-        android:layout_below="@+id/newc"
 
-        android:layout_marginTop="32dp" />
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
