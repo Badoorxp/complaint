@@ -2,7 +2,7 @@
 <resources>
     <!-- From: file:/C:/Users/0/complaint/res/values/color.xml -->
     <eat-comment/>
-    <color name="green">#8BC34A</color>
+    <color name="green">#1DB288</color>
     <!-- From: file:/C:/Users/0/complaint/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>

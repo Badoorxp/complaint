@@ -16,7 +16,7 @@
         android:layout_above="@+id/exitapp"
         android:layout_alignLeft="@+id/newc"
         android:layout_alignRight="@+id/newc"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="40dp"
         android:background="@color/green"
         android:drawableRight="@drawable/upload"
         android:text="@string/fin_b3"/>
@@ -25,10 +25,14 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+
+        android:layout_marginTop="38dp"
+        android:textAlignment="textStart"
         android:text="@string/fin_text1"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/exitapp"
@@ -37,7 +41,7 @@
         android:layout_alignLeft="@+id/newcom"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/newcom"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="40dp"
         android:background="@color/green"
        android:drawableRight="@drawable/logout"
         android:text="@string/fin_b4"/>
@@ -49,7 +53,7 @@
         android:layout_above="@+id/newcom"
         android:layout_alignLeft="@+id/exit"
         android:layout_alignRight="@+id/exit"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="40dp"
         android:background="@color/green"
        android:drawableRight="@drawable/menu"
         android:text="@string/fin_b2"/>
@@ -60,11 +64,19 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/newc"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="40dp"
         android:drawableRight="@drawable/home"
+
         android:background="@color/green"
         android:text="@string/fin_b1" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/ttt"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout><!-- From: file:/C:/Users/0/complaint/res/layout/activity_finish.xml -->
