@@ -25,14 +25,11 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:layout_marginTop="38dp"
-        android:textAlignment="textStart"
         android:text="@string/fin_text1"
-
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp" />
 
     <Button
         android:id="@+id/exitapp"

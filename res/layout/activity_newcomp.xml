@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.complaint.Newcomp" >
+    tools:context="com.example.complaint.Newcomp"
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/textView1"
@@ -25,7 +26,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="38dp"
-        style="@style/btnStyleBlackpearl"
+        android:background="@drawable/button_bg_rounded_corners"
+        android:padding="15dp"
+
         android:text="تسجيل جديد" />
 
 </RelativeLayout>
