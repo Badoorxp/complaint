@@ -47,7 +47,7 @@
         android:layout_width="90dp"
         android:layout_height="50dp"
         android:background="@drawable/button_bg_rounded_corners"
-        android:layout_marginRight="10dp"
+
         android:textColor="@color/white"
         android:text="تعديل"
         android:layout_alignTop="@+id/send"
