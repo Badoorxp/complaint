@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.complaint.Newcomp"
-    android:background="@drawable/background">
+    android:background="@color/Residential">
 
     <TextView
         android:id="@+id/textView1"
@@ -17,6 +17,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:text="مشاكل مشابهة"
+       android:textColor="@color/green"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
@@ -28,7 +29,7 @@
         android:layout_marginBottom="38dp"
         android:background="@drawable/button_bg_rounded_corners"
         android:padding="15dp"
-
+       android:textColor="@color/white"
         android:text="تسجيل جديد" />
 
 </RelativeLayout>

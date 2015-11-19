@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.complaint.Finish"
-    android:background="@drawable/background">
+    android:background="@color/Residential">
 
     <Button
         android:id="@+id/newcom"
@@ -17,7 +17,7 @@
         android:layout_alignLeft="@+id/newc"
         android:layout_alignRight="@+id/newc"
         android:layout_marginBottom="40dp"
-        android:background="@color/green"
+        android:background="@drawable/button_bg_rounded_corners"
         android:drawableRight="@drawable/upload"
         android:text="@string/fin_b3"/>
 
@@ -29,7 +29,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp" />
+        android:layout_marginTop="20dp" />
 
     <Button
         android:id="@+id/exitapp"
@@ -39,7 +39,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/newcom"
         android:layout_marginBottom="40dp"
-        android:background="@color/green"
+        android:background="@drawable/button_bg_rounded_corners"
        android:drawableRight="@drawable/logout"
         android:text="@string/fin_b4"/>
 
@@ -51,8 +51,8 @@
         android:layout_alignLeft="@+id/exit"
         android:layout_alignRight="@+id/exit"
         android:layout_marginBottom="40dp"
-        android:background="@color/green"
-       android:drawableRight="@drawable/menu"
+        android:drawableRight="@drawable/menu"
+        android:background="@drawable/button_bg_rounded_corners"
         android:text="@string/fin_b2"/>
 
     <Button
@@ -63,8 +63,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
         android:drawableRight="@drawable/home"
+        android:background="@drawable/button_bg_rounded_corners"
 
-        android:background="@color/green"
         android:text="@string/fin_b1" />
 
     <ImageView
@@ -73,6 +73,7 @@
         android:id="@+id/imageView"
         android:src="@drawable/ttt"
         android:layout_below="@+id/textView1"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true" />
 
 

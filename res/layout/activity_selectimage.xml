@@ -7,15 +7,16 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.complaint.Selectimage"
-    android:background="@drawable/background">
+    android:background="@color/Residential">
 
     <Button
-        android:id="@+id/newc"
+        android:id="@+id/takephotobtn"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="30dp"
         android:background="@drawable/button_bg_rounded_corners"
+        android:textColor="@color/white"
         android:text="اختيار صورة"
         android:layout_alignParentStart="true" />
 
@@ -23,23 +24,20 @@
         android:id="@+id/exitapp"
         android:layout_width="90dp"
         android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
         android:background="@drawable/button_bg_rounded_corners"
-
+        android:textColor="@color/white"
         android:text="رفع الشكوى"
-        android:layout_alignTop="@+id/newcom"
-        android:layout_alignBottom="@+id/newcom" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/exit"
         android:layout_width="90dp"
         android:layout_height="50dp"
-
+        android:textColor="@color/white"
         android:text="الغاء"
         android:background="@drawable/button_bg_rounded_corners"
-
-
-        android:layout_marginLeft="0dp"
+        android:layout_marginLeft="10dp"
         android:layout_alignBottom="@+id/exitapp"
         android:layout_alignTop="@+id/exitapp" />
 
@@ -47,12 +45,13 @@
         android:id="@+id/newcom"
         android:layout_width="90dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="30dp"
         android:background="@drawable/button_bg_rounded_corners"
-        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/white"
         android:text="تعديل"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/newc" />
+        android:layout_alignTop="@+id/exitapp"
+        android:layout_alignEnd="@+id/takephotobtn"
+        android:layout_alignBottom="@+id/exitapp" />
 
     <ImageView
         android:layout_width="300dp"

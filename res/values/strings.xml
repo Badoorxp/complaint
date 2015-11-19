@@ -19,5 +19,24 @@
     <string name="fin_text1">تمت العملية بنجاح</string>
     <string name="fin_b4">خروج</string>
     <string name="fin_b1">العودة الى القائمة الرئيسية</string>
+    <string name="start_b1">شكوى جديدة</string>
+    <string name="start_b2">شكاوي مطروحة</string>
 
-</resources>
+        <string-array name="countries_array">
+            <item>عمان</item>
+            <item>الزرقاء</item>
+            <item>مادبا</item>
+            <item>عجلون</item>
+            <item>جرش</item>
+            <item>السلط</item>
+            <item>العقبة</item>
+            <item>معان</item>
+            <item>الكرك</item>
+            <item>اربد</item>
+            <item>المفرق</item>
+            <item>الطفيلة</item>
+
+        </string-array>
+    <string name="title_activity_main">MainActivity</string>
+    </resources>
+

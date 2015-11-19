@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/C:/Users/0/complaint/res/values/strings.xml -->
+    <eat-comment/>
+    <string-array name="countries_array">
+            <item>عمان</item>
+            <item>الزرقاء</item>
+            <item>مادبا</item>
+            <item>عجلون</item>
+            <item>جرش</item>
+            <item>السلط</item>
+            <item>العقبة</item>
+            <item>معان</item>
+            <item>الكرك</item>
+            <item>اربد</item>
+            <item>المفرق</item>
+            <item>الطفيلة</item>
+
+        </string-array>
     <!-- From: file:/C:/Users/0/complaint/res/values/color.xml -->
     <eat-comment/>
+    <color name="Residential">#ccc</color>
     <color name="green">#1DB288</color>
     <!-- From: file:/C:/Users/0/complaint/res/values/dimens.xml -->
     <eat-comment/>
