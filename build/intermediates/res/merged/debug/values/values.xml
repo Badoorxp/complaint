@@ -21,6 +21,7 @@
     <eat-comment/>
     <color name="Residential">#ccc</color>
     <color name="green">#1DB288</color>
+    <color name="white">#FFFFFF</color>
     <!-- From: file:/C:/Users/0/complaint/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
@@ -39,9 +40,13 @@
     <string name="hello_world">Hello world!</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="start_b1">شكوى جديدة</string>
+    <string name="start_b2">شكاوي مطروحة</string>
     <string name="title_activity_finish">finish</string>
+    <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_newcomp">Newcomp</string>
     <string name="title_activity_newcomplaint">Newcomplaint</string>
+    <string name="title_activity_newcomplaint2">Newcomplaint2</string>
     <string name="title_activity_selectimage">Selectimage</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>

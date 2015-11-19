@@ -1,22 +1,15 @@
 package com.example.complaint;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Camera;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.SurfaceHolder;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import java.io.File;
 
@@ -33,11 +26,13 @@ public class Selectimage extends Activity
 		setContentView(R.layout.activity_selectimage);
 		Button takephoto= (Button)findViewById(R.id.takephotobtn);
 		photo = (ImageView)findViewById(R.id.take);
-		Button send=(Button)findViewById(R.id.exitapp);
+		Button send=(Button)findViewById(R.id.send);
 		Button change=(Button)findViewById(R.id.newcom);
 		Button exit=(Button)findViewById(R.id.exit);
 
+		
 		takephoto.setOnClickListener(new OnClickListener()
+			
 		{
 			@Override
 			public void onClick(View view)

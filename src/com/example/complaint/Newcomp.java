@@ -15,8 +15,8 @@ public class Newcomp extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_newcomp);
-		Button reg=(Button)findViewById(R.id.newc);
-		reg.setOnClickListener(new OnClickListener(){
+		Button newc=(Button)findViewById(R.id.newc);
+		newc.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View v) {

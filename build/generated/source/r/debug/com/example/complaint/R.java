@@ -16,6 +16,7 @@ public final class R {
     public static final class color {
         public static final int Residential=0x7f070000;
         public static final int green=0x7f070001;
+        public static final int white=0x7f070002;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f050000;
@@ -37,30 +38,35 @@ public final class R {
         public static final int upload=0x7f02000b;
     }
     public static final class id {
-        public static final int action_example=0x7f0a000e;
-        public static final int action_settings=0x7f0a000d;
-        public static final int container=0x7f0a0007;
-        public static final int drawer_layout=0x7f0a0006;
+        public static final int action_example=0x7f0a0014;
+        public static final int action_settings=0x7f0a0013;
+        public static final int button=0x7f0a000f;
+        public static final int comp=0x7f0a0006;
+        public static final int editText=0x7f0a0008;
+        public static final int editText2=0x7f0a000a;
+        public static final int editText3=0x7f0a0010;
         public static final int exit=0x7f0a0004;
-        public static final int exitapp=0x7f0a0001;
         public static final int imageView=0x7f0a0005;
-        public static final int imageView1=0x7f0a000c;
-        public static final int navigation_drawer=0x7f0a0008;
         public static final int newc=0x7f0a0002;
         public static final int newcom=0x7f0a0000;
-        public static final int reg=0x7f0a000b;
-        public static final int take=0x7f0a000a;
-        public static final int takephotobtn=0x7f0a0009;
+        public static final int newcomp=0x7f0a0007;
+        public static final int send=0x7f0a0001;
+        public static final int spinner=0x7f0a000c;
+        public static final int take=0x7f0a0012;
+        public static final int takephotobtn=0x7f0a0011;
+        public static final int textView=0x7f0a0009;
         public static final int textView1=0x7f0a0003;
+        public static final int textView2=0x7f0a000b;
+        public static final int textView3=0x7f0a000d;
+        public static final int textView4=0x7f0a000e;
     }
     public static final class layout {
         public static final int activity_finish=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_newcomp=0x7f030002;
         public static final int activity_newcomplaint=0x7f030003;
-        public static final int activity_selectimage=0x7f030004;
-        public static final int fragment_main=0x7f030005;
-        public static final int fragment_navigation_drawer=0x7f030006;
+        public static final int activity_newcomplaint2=0x7f030004;
+        public static final int activity_selectimage=0x7f030005;
     }
     public static final class menu {
         public static final int finish=0x7f090000;
@@ -82,13 +88,17 @@ public final class R {
         public static final int hello_world=0x7f080008;
         public static final int navigation_drawer_close=0x7f080009;
         public static final int navigation_drawer_open=0x7f08000a;
-        public static final int title_activity_finish=0x7f08000b;
-        public static final int title_activity_newcomp=0x7f08000c;
-        public static final int title_activity_newcomplaint=0x7f08000d;
-        public static final int title_activity_selectimage=0x7f08000e;
-        public static final int title_section1=0x7f08000f;
-        public static final int title_section2=0x7f080010;
-        public static final int title_section3=0x7f080011;
+        public static final int start_b1=0x7f08000b;
+        public static final int start_b2=0x7f08000c;
+        public static final int title_activity_finish=0x7f08000d;
+        public static final int title_activity_main=0x7f08000e;
+        public static final int title_activity_newcomp=0x7f08000f;
+        public static final int title_activity_newcomplaint=0x7f080010;
+        public static final int title_activity_newcomplaint2=0x7f080011;
+        public static final int title_activity_selectimage=0x7f080012;
+        public static final int title_section1=0x7f080013;
+        public static final int title_section2=0x7f080014;
+        public static final int title_section3=0x7f080015;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

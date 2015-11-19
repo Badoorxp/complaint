@@ -49,6 +49,10 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
+        <activity
+            android:name=".Newcomplaint2"
+            android:label="@string/title_activity_newcomplaint2" >
+        </activity>
     </application>
 
 </manifest>

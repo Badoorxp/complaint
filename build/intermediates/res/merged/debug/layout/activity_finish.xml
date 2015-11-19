@@ -13,10 +13,11 @@
         android:id="@+id/newcom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/exitapp"
+        android:layout_above="@+id/send"
         android:layout_alignLeft="@+id/newc"
         android:layout_alignRight="@+id/newc"
         android:layout_marginBottom="40dp"
+        android:textColor="@color/white"
         android:background="@drawable/button_bg_rounded_corners"
         android:drawableRight="@drawable/upload"
         android:text="@string/fin_b3"/>
@@ -27,18 +28,20 @@
         android:layout_height="wrap_content"
         android:text="@string/fin_text1"
         android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/green"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
 
     <Button
-        android:id="@+id/exitapp"
+        android:id="@+id/send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/newcom"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/newcom"
         android:layout_marginBottom="40dp"
+        android:textColor="@color/white"
         android:background="@drawable/button_bg_rounded_corners"
        android:drawableRight="@drawable/logout"
         android:text="@string/fin_b4"/>
@@ -52,6 +55,7 @@
         android:layout_alignRight="@+id/exit"
         android:layout_marginBottom="40dp"
         android:drawableRight="@drawable/menu"
+        android:textColor="@color/white"
         android:background="@drawable/button_bg_rounded_corners"
         android:text="@string/fin_b2"/>
 
@@ -62,6 +66,7 @@
         android:layout_above="@+id/newc"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
+        android:textColor="@color/white"
         android:drawableRight="@drawable/home"
         android:background="@drawable/button_bg_rounded_corners"
 
@@ -73,7 +78,6 @@
         android:id="@+id/imageView"
         android:src="@drawable/ttt"
         android:layout_below="@+id/textView1"
-        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true" />
 
 
