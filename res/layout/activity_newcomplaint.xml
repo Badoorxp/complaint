@@ -27,7 +27,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="الاسم الثلاثي"
         android:id="@+id/textView"
-        android:layout_KRight="10dp"
+
         android:layout_marginTop="20dp"
         android:textColor="@color/green"
         android:layout_alignParentTop="true"
@@ -78,10 +78,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="التالي"
-        android:id="@+id/button"
+        android:id="@+id/next"
         android:background="@drawable/button_bg_rounded_corners"
         android:textColor="@color/white"
         android:layout_alignParentBottom="true"
-       android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginBottom="49dp" />
 
 </RelativeLayout>

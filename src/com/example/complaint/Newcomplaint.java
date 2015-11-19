@@ -1,6 +1,7 @@
 package com.example.complaint;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -8,7 +9,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.Spinner;
+import android.view.View.OnClickListener;
 
 public class Newcomplaint extends Activity {
 
@@ -24,8 +27,17 @@ public class Newcomplaint extends Activity {
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 // Apply the adapter to the spinner
 		spinner.setAdapter(adapter);
-	}
 
+		Button next = (Button) findViewById(R.id.next);
+		next.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+				Intent i=new Intent(Newcomplaint.this,Newcomplaint2.class);
+				startActivity(i);
+			}
+		});
+	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
