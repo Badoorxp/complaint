@@ -19,6 +19,7 @@ public class Newcomplaint2 extends Activity {
             public void onClick(View view) {
                 Intent i=new Intent(Newcomplaint2.this,Selectimage.class);
                 startActivity(i);
+
             }
         });
     }

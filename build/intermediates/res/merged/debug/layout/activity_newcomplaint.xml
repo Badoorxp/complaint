@@ -81,9 +81,9 @@
         android:id="@+id/next"
         android:background="@drawable/button_bg_rounded_corners"
         android:textColor="@color/white"
-        android:layout_below="@+id/spinner"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_marginTop="20dp" />
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView2" />
 
 </RelativeLayout>
 <!-- From: file:/C:/Users/0/complaint/res/layout/activity_newcomplaint.xml -->

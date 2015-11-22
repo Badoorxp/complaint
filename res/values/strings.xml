@@ -12,8 +12,8 @@
     <string name="title_activity_newcomp">Newcomp</string>
     <string name="hello_world">Hello world!</string>
     <string name="fin_b3">شكوى جديدة</string>
-    <string name="title_activity_newcomplaint">Newcomplaint</string>
-    <string name="title_activity_selectimage">Selectimage</string>
+    <string name="title_activity_newcomplaint">تسجيل جديد</string>
+    <string name="title_activity_selectimage">متابعة التسجيل</string>
     <string name="title_activity_finish">finish</string>
     <string name="fin_b2">عرض شكاوي مطروحة</string>
     <string name="fin_text1">تمت العملية بنجاح</string>
@@ -37,7 +37,7 @@
             <item>الطفيلة</item>
 
         </string-array>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_newcomplaint2">Newcomplaint2</string>
+    <string name="title_activity_main">نظام الشكاوي الالكتروني</string>
+    <string name="title_activity_newcomplaint2">متابعة التسجيل</string>
     </resources>
 

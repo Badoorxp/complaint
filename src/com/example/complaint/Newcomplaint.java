@@ -35,6 +35,7 @@ public class Newcomplaint extends Activity {
 			public void onClick(View view) {
 				Intent i=new Intent(Newcomplaint.this,Newcomplaint2.class);
 				startActivity(i);
+
 			}
 		});
 	}

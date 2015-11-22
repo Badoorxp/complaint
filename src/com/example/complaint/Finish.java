@@ -2,12 +2,15 @@ package com.example.complaint;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
+import android.os.Process;
+import android.os.*;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+
+import java.util.Properties;
 
 public class Finish extends Activity {
 
@@ -33,28 +36,35 @@ public class Finish extends Activity {
 			
 		});
 	
-	goback.setOnClickListener(new OnClickListener(){
+	goback.setOnClickListener(new OnClickListener() {
 
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
-			Intent i=new Intent(Finish.this,MainActivity.class);
+			Intent i = new Intent(Finish.this, MainActivity.class);
 			startActivity(i);
-			
-			
+
+
 		}
-		
+
 	});
-    exit.setOnClickListener(new OnClickListener() {
+    exit.setOnClickListener(new OnClickListener()
+	{
 
-        @Override
-        public void onClick(View arg0) {
-android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(1);
-
+		@Override
+		public void onClick(View view)
+		{
+			Intent intent = new Intent(Intent.ACTION_MAIN);
+			intent.addCategory(Intent.CATEGORY_HOME);
+			intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(intent);
+			finish();
+			System.exit(0);
         }
     });
 }
+
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

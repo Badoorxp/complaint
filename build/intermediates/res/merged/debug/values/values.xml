@@ -43,11 +43,11 @@
     <string name="start_b1">شكوى جديدة</string>
     <string name="start_b2">شكاوي مطروحة</string>
     <string name="title_activity_finish">finish</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">نظام الشكاوي الالكتروني</string>
     <string name="title_activity_newcomp">Newcomp</string>
-    <string name="title_activity_newcomplaint">Newcomplaint</string>
-    <string name="title_activity_newcomplaint2">Newcomplaint2</string>
-    <string name="title_activity_selectimage">Selectimage</string>
+    <string name="title_activity_newcomplaint">تسجيل جديد</string>
+    <string name="title_activity_newcomplaint2">متابعة التسجيل</string>
+    <string name="title_activity_selectimage">متابعة التسجيل</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>

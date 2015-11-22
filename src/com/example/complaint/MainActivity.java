@@ -24,6 +24,7 @@ public class MainActivity extends Activity {
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, Newcomplaint.class);
                 startActivity(i);
+
             }
         });
 
