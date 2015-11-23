@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
 
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, Newcomplaint.class);
+                Intent i = new Intent(MainActivity.this, Newcomplaint2.class);
                 startActivity(i);
 
             }

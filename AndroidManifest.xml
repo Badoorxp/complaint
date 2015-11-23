@@ -28,10 +28,6 @@
             android:label="@string/title_activity_newcomp" >
         </activity>
         <activity
-            android:name=".Newcomplaint"
-            android:label="@string/title_activity_newcomplaint" >
-        </activity>
-        <activity
             android:name=".Selectimage"
             android:label="@string/title_activity_selectimage" >
 

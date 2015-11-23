@@ -38,46 +38,45 @@ public final class R {
         public static final int upload=0x7f02000b;
     }
     public static final class id {
+        public static final int ScrollView01=0x7f0a0008;
         public static final int action_example=0x7f0a001f;
         public static final int action_settings=0x7f0a001e;
-        public static final int button2=0x7f0a000f;
+        public static final int button2=0x7f0a000b;
         public static final int comp=0x7f0a0006;
-        public static final int editText=0x7f0a0008;
-        public static final int editText2=0x7f0a000a;
-        public static final int editText4=0x7f0a0018;
-        public static final int editText5=0x7f0a001a;
+        public static final int editText=0x7f0a0009;
+        public static final int editText2=0x7f0a000c;
+        public static final int editText3=0x7f0a001a;
+        public static final int editText4=0x7f0a0019;
         public static final int exit=0x7f0a0004;
         public static final int imageView=0x7f0a0005;
         public static final int newc=0x7f0a0002;
         public static final int newcom=0x7f0a0000;
         public static final int newcomp=0x7f0a0007;
-        public static final int next=0x7f0a000e;
-        public static final int next1=0x7f0a001b;
-        public static final int radioButton=0x7f0a0014;
-        public static final int radioButton2=0x7f0a0011;
-        public static final int radioButton3=0x7f0a0015;
-        public static final int radioButton4=0x7f0a0017;
-        public static final int radioButton5=0x7f0a0010;
-        public static final int radioButton6=0x7f0a0013;
+        public static final int next1=0x7f0a0018;
+        public static final int radioButton=0x7f0a0012;
+        public static final int radioButton2=0x7f0a000f;
+        public static final int radioButton3=0x7f0a0013;
+        public static final int radioButton4=0x7f0a0015;
+        public static final int radioButton5=0x7f0a000e;
+        public static final int radioButton6=0x7f0a0011;
         public static final int send=0x7f0a0001;
-        public static final int spinner=0x7f0a000c;
+        public static final int spinner=0x7f0a0017;
         public static final int take=0x7f0a001d;
         public static final int takephotobtn=0x7f0a001c;
-        public static final int textView=0x7f0a0009;
+        public static final int textView=0x7f0a000a;
         public static final int textView1=0x7f0a0003;
-        public static final int textView2=0x7f0a000b;
-        public static final int textView3=0x7f0a000d;
-        public static final int textView6=0x7f0a0012;
-        public static final int textView7=0x7f0a0016;
-        public static final int textView8=0x7f0a0019;
+        public static final int textView2=0x7f0a000d;
+        public static final int textView3=0x7f0a001b;
+        public static final int textView6=0x7f0a0010;
+        public static final int textView7=0x7f0a0014;
+        public static final int textView8=0x7f0a0016;
     }
     public static final class layout {
         public static final int activity_finish=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_newcomp=0x7f030002;
-        public static final int activity_newcomplaint=0x7f030003;
-        public static final int activity_newcomplaint2=0x7f030004;
-        public static final int activity_selectimage=0x7f030005;
+        public static final int activity_newcomplaint2=0x7f030003;
+        public static final int activity_selectimage=0x7f030004;
     }
     public static final class menu {
         public static final int finish=0x7f090000;

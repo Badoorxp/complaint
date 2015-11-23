@@ -49,7 +49,7 @@ public class Selectimage extends Activity
 				// TODO Auto-generated method stub
 				Intent i=new Intent(Selectimage.this,Finish.class);
 				startActivity(i);
-				finish();
+
 				
 			}
 			
@@ -60,7 +60,7 @@ public class Selectimage extends Activity
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent i=new Intent(Selectimage.this,Newcomplaint.class);
+				Intent i=new Intent(Selectimage.this,Newcomplaint2.class);
 				startActivity(i);
 				
 				
