@@ -1,7 +1,10 @@
 package com.example.complaint;
 
 import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
@@ -16,6 +19,9 @@ import android.widget.Spinner;
 public class Newcomplaint2 extends Activity {
 
        String typecomp;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +51,8 @@ public class Newcomplaint2 extends Activity {
 
 
         Button next1 = (Button) findViewById(R.id.next1);
+        Button location_comp = (Button) findViewById(R.id.button2);
+
 
         next1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +73,21 @@ public class Newcomplaint2 extends Activity {
 
             }
         });
+
+        location_comp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+            }
+        });
+
+
     }
+
+
+
+
 
 //ميثود نوع الشكوى
 

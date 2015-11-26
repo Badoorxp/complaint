@@ -1,9 +1,12 @@
 package com.example.complaint;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -33,6 +36,12 @@ public class Selectimage extends Activity
 
 		 //عشان اجيب الداتا
 		final Intent info=this.getIntent();
+		String type_comp=info.getExtras().getString("typecomp");
+		String location=info.getExtras().getString("location");
+		String phone=info.getExtras().getString("phone");
+		String name=info.getExtras().getString("name");
+		String city=info.getExtras().getString("city");
+		String details=info.getExtras().getString("details");
 
 
 		//اكشن فتح الكاميرا
@@ -47,18 +56,16 @@ public class Selectimage extends Activity
 			}
 		});
 
+
+
+
 		send.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent i=new Intent(Selectimage.this,Finish.class);
-				String type_comp=info.getExtras().getString("typecomp");
-				String location=info.getExtras().getString("location");
-				String phone=info.getExtras().getString("phone");
-				String name=info.getExtras().getString("name");
-				String city=info.getExtras().getString("city");
-				String details=info.getExtras().getString("details");
+
 				startActivity(i);
 
 				
@@ -80,6 +87,14 @@ public class Selectimage extends Activity
 
 			
 		});
+
+
+		//mac address
+		WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+		WifiInfo wInfo = wifiManager.getConnectionInfo();
+		 	String macAddress = wInfo.getMacAddress();
+
+
 
 
 		exit.setOnClickListener(new OnClickListener() {
