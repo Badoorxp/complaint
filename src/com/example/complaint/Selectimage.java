@@ -19,7 +19,7 @@ public class Selectimage extends Activity
 	ImageView photo;
 	File imagefile;
 
-	public static final int CAM_REQUEST = 1313;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -31,7 +31,11 @@ public class Selectimage extends Activity
 		Button change=(Button)findViewById(R.id.newcom);
 		Button exit=(Button)findViewById(R.id.exit);
 
-		
+		 //عشان اجيب الداتا
+		final Intent info=this.getIntent();
+
+
+		//اكشن فتح الكاميرا
 		takephoto.setOnClickListener(new OnClickListener()
 			
 		{
@@ -49,13 +53,12 @@ public class Selectimage extends Activity
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent i=new Intent(Selectimage.this,Finish.class);
-				String type_comp=i.getExtras().getString("typecomp");
-				String location=i.getExtras().getString("location");
-				String phone=i.getExtras().getString("phone");
-				String name=i.getExtras().getString("name");
-				String city=i.getExtras().getString("city");
-				String details=i.getExtras().getString("details");
-				Toast.makeText(getBaseContext(),name,Toast.LENGTH_LONG).show();
+				String type_comp=info.getExtras().getString("typecomp");
+				String location=info.getExtras().getString("location");
+				String phone=info.getExtras().getString("phone");
+				String name=info.getExtras().getString("name");
+				String city=info.getExtras().getString("city");
+				String details=info.getExtras().getString("details");
 				startActivity(i);
 
 				

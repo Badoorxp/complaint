@@ -14,25 +14,35 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 public class Newcomplaint2 extends Activity {
-    EditText name = (EditText) findViewById(R.id.editText);
-    EditText phone = (EditText) findViewById(R.id.editText2);
-    Spinner city = (Spinner) findViewById(R.id.spinner);
-    EditText location = (EditText) findViewById(R.id.editText3);
-    EditText details = (EditText) findViewById(R.id.editText4);
-    String typecomp;
 
+       String typecomp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newcomplaint2);
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        //التعاريف
+     final    EditText name = (EditText) findViewById(R.id.editText);
+        final   EditText phone = (EditText) findViewById(R.id.editText2);
+        final  Spinner city = (Spinner) findViewById(R.id.spinner);
+        final  EditText location = (EditText) findViewById(R.id.editText3);
+        final   EditText details = (EditText) findViewById(R.id.editText4);
+
+
+
+
+
+
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.countries_array, android.R.layout.simple_spinner_item);
 // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 // Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
+        city.setAdapter(adapter);
+
+
+
+
 
         Button next1 = (Button) findViewById(R.id.next1);
 
@@ -45,7 +55,7 @@ public class Newcomplaint2 extends Activity {
                 String location1 = location.getText().toString();
                 String details1 = details.getText().toString();
                 String city1 = city.getSelectedItem().toString();
-                i.putExtra("typecomp",typecomp);
+                i.putExtra("typecomp", typecomp);
                 i.putExtra("location", location1);
                 i.putExtra("phone", phone1);
                 i.putExtra("name", name1);
@@ -55,21 +65,8 @@ public class Newcomplaint2 extends Activity {
 
             }
         });
+    }
 
-        class SpinnerActivity extends Activity implements AdapterView.OnItemSelectedListener {
-
-
-            public void onItemSelected(AdapterView<?> parent, View view,
-                                       int pos, long id) {
-                // An item was selected. You can retrieve the selected item using
-                // parent.getItemAtPosition(pos)
-            }
-
-            public void onNothingSelected(AdapterView<?> parent) {
-                // Another interface callback
-            }
-
-        }}
 //ميثود نوع الشكوى
 
     public void onRadioButtonClicked(View view) {
@@ -96,7 +93,11 @@ public class Newcomplaint2 extends Activity {
                 break;
 
         }
-
     }
+
+
+
 }
+
+
 
