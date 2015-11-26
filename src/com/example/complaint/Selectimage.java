@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.File;
 
@@ -48,6 +49,13 @@ public class Selectimage extends Activity
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent i=new Intent(Selectimage.this,Finish.class);
+				String type_comp=i.getExtras().getString("typecomp");
+				String location=i.getExtras().getString("location");
+				String phone=i.getExtras().getString("phone");
+				String name=i.getExtras().getString("name");
+				String city=i.getExtras().getString("city");
+				String details=i.getExtras().getString("details");
+				Toast.makeText(getBaseContext(),name,Toast.LENGTH_LONG).show();
 				startActivity(i);
 
 				
@@ -83,7 +91,7 @@ public class Selectimage extends Activity
 		});
 	}
 
-
+//كود الكاميرا
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data)
 	{

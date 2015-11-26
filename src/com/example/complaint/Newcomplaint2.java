@@ -18,8 +18,8 @@ public class Newcomplaint2 extends Activity {
     EditText phone = (EditText) findViewById(R.id.editText2);
     Spinner city = (Spinner) findViewById(R.id.spinner);
     EditText location = (EditText) findViewById(R.id.editText3);
-    EditText ditals = (EditText) findViewById(R.id.editText4);
-    String typycomp;
+    EditText details = (EditText) findViewById(R.id.editText4);
+    String typecomp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +43,13 @@ public class Newcomplaint2 extends Activity {
                 String name1 = name.getText().toString();
                 String phone1 = phone.getText().toString();
                 String location1 = location.getText().toString();
-                String ditalse1 = ditals.getText().toString();
+                String details1 = details.getText().toString();
                 String city1 = city.getSelectedItem().toString();
-                i.putExtra("typecomp",typycomp);
+                i.putExtra("typecomp",typecomp);
                 i.putExtra("location", location1);
                 i.putExtra("phone", phone1);
                 i.putExtra("name", name1);
-                i.putExtra("ditalse", ditalse1);
+                i.putExtra("details", details1);
                 i.putExtra("city", city1);
                 startActivity(i);
 
@@ -80,19 +80,19 @@ public class Newcomplaint2 extends Activity {
         switch (view.getId()) {
             case R.id.radioButton5:
                 if (checked)
-                    typycomp = "نفايات";
+                    typecomp = "نفايات";
                 break;
             case R.id.radioButton:
                 if (checked)
-                    typycomp = "مياه";
+                    typecomp = "مياه";
                 break;
             case R.id.radioButton3:
                 if (checked)
-                    typycomp = "صرف صحي";
+                    typecomp = "صرف صحي";
                 break;
             case R.id.radioButton6:
                 if (checked)
-                    typycomp = "اخرى";
+                    typecomp = "اخرى";
                 break;
 
         }
