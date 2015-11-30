@@ -9,6 +9,7 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.telephony.TelephonyManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -107,7 +108,17 @@ public class Selectimage extends Activity
 			}
 
 		});
+
+
+
+
+
+		//سيرال الكرت
+		TelephonyManager telemamanger = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+		String getSimSerialNumber = telemamanger.getSimSerialNumber();
+		Toast.makeText(this,getSimSerialNumber,Toast.LENGTH_SHORT).show();
 	}
+
 
 //كود الكاميرا
 	@Override
