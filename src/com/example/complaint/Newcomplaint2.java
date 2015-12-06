@@ -21,6 +21,9 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Newcomplaint2 extends Activity {
 
 
@@ -84,24 +87,27 @@ public class Newcomplaint2 extends Activity {
                 i.putExtra("name", name1);
                 i.putExtra("details", details1);
                 i.putExtra("city", city1);
+                if(isValidEmail(email1))
+                    if (phone1.length()==10 )
+
                 startActivity(i);
+                else Toast.makeText(getBaseContext(),"الرجاء تعبئة البيانات صحيحة",Toast.LENGTH_SHORT).show();
+                else Toast.makeText(getBaseContext(),"الرجاء تعبئة البيانات صحيحة",Toast.LENGTH_SHORT).show();
 
             }
         });
 
 
-
-
-
-
-
-
     }
+    // validating email id
+    private boolean isValidEmail(String email) {
+        String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
-
-
-
-
+        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
+    }
 
 
 

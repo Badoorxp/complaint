@@ -1,6 +1,7 @@
 package com.example.complaint;
 
 import android.Manifest;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -93,6 +94,14 @@ public class Selectimage extends Activity {
 		});
 
 
+
+
+		//كود التلفون
+		TelephonyManager telephonyManager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+		String IMMEI=telephonyManager.getDeviceId();
+		Toast.makeText(getBaseContext(),IMMEI,Toast.LENGTH_SHORT).show();
+
+
 		//mac address
 		WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
 		WifiInfo wInfo = wifiManager.getConnectionInfo();
@@ -122,7 +131,9 @@ public class Selectimage extends Activity {
 			if (resultCode == RESULT_OK) {
 				Bitmap th = (Bitmap) data.getExtras().get("data");
 
-				photo.setImageBitmap(th);
+					photo.setImageBitmap(th);
+
+
 
 
 			} else if (resultCode == RESULT_CANCELED) {
