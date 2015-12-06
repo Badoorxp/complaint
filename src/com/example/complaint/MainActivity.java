@@ -16,7 +16,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button newcomp=(Button)findViewById(R.id.newcomp);
-        Button comp=(Button)findViewById(R.id.comp);
+
 
         newcomp.setOnClickListener(new OnClickListener() {
 

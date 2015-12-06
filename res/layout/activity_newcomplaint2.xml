@@ -2,11 +2,11 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ScrollView01"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
     <RelativeLayout
     xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
         android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -21,6 +21,7 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/editText"
+            android:textColor="@color/green"
             android:layout_below="@+id/textView"
             android:layout_marginTop="15dp"
             android:layout_centerHorizontal="true" />
@@ -31,10 +32,8 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="الاسم الثلاثي"
             android:id="@+id/textView"
-            android:layout_below="@+id/button2"
             android:layout_marginTop="15dp"
             android:textColor="@color/green"
-
             android:layout_centerHorizontal="true" />
 
         <EditText
@@ -60,16 +59,6 @@
             android:layout_centerHorizontal="true" />
 
 
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="الدخول التلقائي للموقع"
-            android:id="@+id/button2"
-            android:background="@drawable/button_bg_rounded_corners"
-            android:textColor="@color/white"
-            android:layout_marginTop="15dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -82,59 +71,17 @@
             android:layout_below="@+id/editText2"
             android:layout_centerHorizontal="true" />
 
-    <RadioGroup
-        android:layout_width="fill_parent"
-        android:id="@+id/radiogroop"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/textView6"
-        android:orientation="horizontal">
-    <RadioButton
-            android:layout_width="wrap_content"
+
+        <Spinner
+            android:id="@+id/typecomp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="نفايات"
-            android:textColor="@color/green"
-            android:id="@+id/radioButton5"
-            android:layout_marginTop="5dp"
-        />
-
-
-        <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/green"
-        android:text="مياه"
-        android:id="@+id/radioButton"
-        android:layout_marginTop="5dp"
-
-            />
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/textView6"></Spinner>
 
 
 
 
-        <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="صرف صحي"
-        android:textColor="@color/green"
-        android:id="@+id/radioButton3"
-
-       android:layout_marginTop="5dp" />
-
-        <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="اخرى"
-        android:id="@+id/radioButton6"
-        android:textColor="@color/green"
-
-            android:layout_marginTop="5dp"
-
-            />
-
-
-
-    </RadioGroup>
 
 
     <TextView
@@ -145,7 +92,7 @@
         android:id="@+id/textView7"
         android:textColor="@color/green"
         android:layout_marginTop="15dp"
-        android:layout_below="@+id/radiogroop"
+        android:layout_below="@+id/typecomp"
         android:layout_centerHorizontal="true" />
 
 
@@ -153,7 +100,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="موقع الشكوى"
+        android:text="البريد الالكتروني"
         android:textColor="@color/green"
         android:id="@+id/textView8"
             android:layout_below="@+id/spinner"
@@ -186,7 +133,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/editText3"
             android:layout_below="@+id/textView8"
-
+            android:textColor="@color/green"
+            android:inputType="textEmailAddress"
             android:layout_marginTop="15dp" />
 
         <TextView

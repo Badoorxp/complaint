@@ -9,25 +9,25 @@
     android:background="@drawable/background">
 
     <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="@string/start_b2"
-        android:id="@+id/comp"
-        android:background="@drawable/button_bg_rounded_corners"
-        android:textColor="@color/white"
-        android:layout_marginBottom="71dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="150dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="@string/start_b1"
         android:id="@+id/newcomp"
         android:background="@drawable/button_bg_rounded_corners"
         android:textColor="@color/white"
-        android:layout_above="@+id/comp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="47dp" />
+        android:layout_marginBottom="111dp" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/logo"
+        android:layout_marginTop="90dp" />
+
+
 </RelativeLayout>
 <!-- From: file:/C:/Users/0/complaint/res/layout/activity_main.xml -->

@@ -15,8 +15,23 @@
             <item>اربد</item>
             <item>المفرق</item>
             <item>الطفيلة</item>
-
         </string-array>
+    <string-array name="type_complant">
+        <item>صحة</item>
+        <item>الزرقاء</item>
+        <item>مادبا</item>
+        <item>عجلون</item>
+        <item>جرش</item>
+        <item>السلط</item>
+        <item>العقبة</item>
+        <item>معان</item>
+        <item>الكرك</item>
+        <item>اربد</item>
+        <item>المفرق</item>
+        <item>الطفيلة</item>
+
+
+    </string-array>
     <!-- From: file:/C:/Users/0/complaint/res/values/color.xml -->
     <eat-comment/>
     <color name="Residential">#ccc</color>
@@ -54,6 +69,7 @@
     <!-- From: file:/C:/Users/0/complaint/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
+
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
@@ -61,6 +77,7 @@
         -->
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:textColor">@color/green</item>
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 </resources>
