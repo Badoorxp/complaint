@@ -8,8 +8,11 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.content.ContextCompat;
@@ -71,8 +74,10 @@ public class Selectimage extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent i = new Intent(Selectimage.this, Finish.class);
-
-				startActivity(i);
+				if (photo != null)
+					startActivity(i);
+				else
+					Toast.makeText(getBaseContext(), "الرجاء ارسال الصورة", Toast.LENGTH_SHORT).show();
 
 
 			}
@@ -94,12 +99,10 @@ public class Selectimage extends Activity {
 		});
 
 
-
-
 		//كود التلفون
-		TelephonyManager telephonyManager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
-		String IMMEI=telephonyManager.getDeviceId();
-		Toast.makeText(getBaseContext(),IMMEI,Toast.LENGTH_SHORT).show();
+		TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+		String IMMEI = telephonyManager.getDeviceId();
+		Toast.makeText(getBaseContext(), IMMEI, Toast.LENGTH_SHORT).show();
 
 
 		//mac address
@@ -118,6 +121,16 @@ public class Selectimage extends Activity {
 			}
 
 		});
+
+		//التحديث للموقع
+		LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		MyCurrentLoctionListener locationListener = new MyCurrentLoctionListener();
+		if ( Build.VERSION.SDK_INT >= 23 &&
+				ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
+				ContextCompat.checkSelfPermission( this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+			return  ;
+		}
+		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, (LocationListener) locationListener);
 
 
 	}
