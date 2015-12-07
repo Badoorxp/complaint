@@ -87,12 +87,14 @@ public class Newcomplaint2 extends Activity {
                 i.putExtra("name", name1);
                 i.putExtra("details", details1);
                 i.putExtra("city", city1);
+                if (name1.length()==0)
                 if(isValidEmail(email1))
                     if (phone1.length()==10 )
 
                 startActivity(i);
-                else Toast.makeText(getBaseContext(),"الرجاء تعبئة البيانات صحيحة",Toast.LENGTH_SHORT).show();
-                else Toast.makeText(getBaseContext(),"الرجاء تعبئة البيانات صحيحة",Toast.LENGTH_SHORT).show();
+                else Toast.makeText(getBaseContext(),"الرجاء ادخال رقم الهاتف بشكل صحيح",Toast.LENGTH_SHORT).show();
+                else Toast.makeText(getBaseContext(),"الرجاء ادخال البريد الالكتروني بشكل صحيح",Toast.LENGTH_SHORT).show();
+                else Toast.makeText(getBaseContext(),"الرجاء ادخال الاسم",Toast.LENGTH_SHORT).show();
 
             }
         });
