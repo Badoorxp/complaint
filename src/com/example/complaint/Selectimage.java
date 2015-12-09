@@ -1,7 +1,9 @@
 package com.example.complaint;
 
-import android.Manifest;
 
+
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -17,21 +19,20 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.content.ContextCompat;
 import android.telephony.TelephonyManager;
-import android.util.Log;
+
+import android.util.Patterns;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-import java.util.Locale;
+import java.util.regex.Pattern;
+
 
 public class Selectimage extends Activity {
 	ImageView photo;
-	File imagefile;
+
 
 
 	@Override
@@ -74,10 +75,9 @@ public class Selectimage extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent i = new Intent(Selectimage.this, Finish.class);
-				if (photo != null)
+
 					startActivity(i);
-				else
-					Toast.makeText(getBaseContext(), "الرجاء ارسال الصورة", Toast.LENGTH_SHORT).show();
+
 
 
 			}
@@ -133,7 +133,23 @@ public class Selectimage extends Activity {
 		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, (LocationListener) locationListener);
 
 
+			//كود الايميل
+		String gmail = null;
+
+		Pattern gmailPattern = Patterns.EMAIL_ADDRESS;
+		Account[] accounts = AccountManager.get(this).getAccounts();
+		for (Account account : accounts) {
+			if (gmailPattern.matcher(account.name).matches()) {
+				gmail = account.name;
+			}
+		}
+
+		Toast.makeText(this, gmail, Toast.LENGTH_LONG).show();
+
 	}
+
+
+
 
 
 	//كود الكاميرا
