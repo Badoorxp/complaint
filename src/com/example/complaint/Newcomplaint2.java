@@ -39,7 +39,7 @@ public class Newcomplaint2 extends Activity {
         final EditText phone = (EditText) findViewById(R.id.editText2);
         final Spinner city = (Spinner) findViewById(R.id.spinner);
         final Spinner typecomp = (Spinner) findViewById(R.id.typecomp);
-        final EditText email = (EditText) findViewById(R.id.editText3);
+
         final EditText details = (EditText) findViewById(R.id.editText4);
         Button next1 = (Button) findViewById(R.id.next1);
 
@@ -76,41 +76,32 @@ public class Newcomplaint2 extends Activity {
                 Intent i = new Intent(Newcomplaint2.this, Selectimage.class);
                 String name1 = name.getText().toString();
                 String phone1 = phone.getText().toString();
-                String email1 = email.getText().toString();
+
                 String details1 = details.getText().toString();
                 String city1 = city.getSelectedItem().toString();
                 String typecomp1 = typecomp.getSelectedItem().toString();
 
                 i.putExtra("typecomp", typecomp1);
-                i.putExtra("email", email1);
+
                 i.putExtra("phone", phone1);
                 i.putExtra("name", name1);
                 i.putExtra("details", details1);
                 i.putExtra("city", city1);
                 if (name1.length()!=0)
-                if(isValidEmail(email1))
+
                     if (phone1.length()==10||phone1.length()==13 )
 
                 startActivity(i);
 
 
                 else Toast.makeText(getBaseContext(),"الرجاء ادخال رقم الهاتف بشكل صحيح",Toast.LENGTH_SHORT).show();
-                else Toast.makeText(getBaseContext(),"الرجاء ادخال البريد الالكتروني بشكل صحيح",Toast.LENGTH_SHORT).show();
                 else Toast.makeText(getBaseContext(),"الرجاء ادخال الاسم",Toast.LENGTH_SHORT).show();
+
 
             }
         });
 
 
-    }
-    // validating email id
-    private boolean isValidEmail(String email) {
-        String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
-                + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-
-        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
-        Matcher matcher = pattern.matcher(email);
-        return matcher.matches();
     }
 
 

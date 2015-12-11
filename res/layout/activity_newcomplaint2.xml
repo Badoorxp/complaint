@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ScrollView01"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content">
     <RelativeLayout
     xmlns:tools="http://schemas.android.com/tools"
@@ -96,17 +96,6 @@
         android:layout_centerHorizontal="true" />
 
 
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="البريد الالكتروني"
-        android:textColor="@color/green"
-        android:id="@+id/textView8"
-            android:layout_below="@+id/spinner"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp" />
-
         <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -128,22 +117,13 @@
             android:layout_marginTop="15dp"
             android:layout_alignParentStart="true" />
 
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/editText3"
-            android:layout_below="@+id/textView8"
-            android:textColor="@color/green"
-            android:inputType="textEmailAddress"
-            android:layout_marginTop="15dp" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="تفاصيل اخرى"
             android:id="@+id/textView3"
-            android:layout_below="@+id/editText3"
+            android:layout_below="@+id/spinner"
             android:layout_centerHorizontal="true"
             android:textColor="@color/green"
             android:layout_marginTop="15dp" />

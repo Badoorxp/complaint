@@ -1,7 +1,7 @@
 package com.example.complaint;
 
 
-
+import android.Manifest;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.Activity;
@@ -9,7 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-
+import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.wifi.WifiInfo;
@@ -19,7 +19,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.content.ContextCompat;
 import android.telephony.TelephonyManager;
-
+import android.util.Base64;
 import android.util.Patterns;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -27,10 +27,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.util.regex.Pattern;
 
 
 public class Selectimage extends Activity {
+
+
 	ImageView photo;
 
 
@@ -76,8 +79,7 @@ public class Selectimage extends Activity {
 				// TODO Auto-generated method stub
 				Intent i = new Intent(Selectimage.this, Finish.class);
 
-					startActivity(i);
-
+				startActivity(i);
 
 
 			}
@@ -123,6 +125,7 @@ public class Selectimage extends Activity {
 		});
 
 		//التحديث للموقع
+
 		LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 		MyCurrentLoctionListener locationListener = new MyCurrentLoctionListener();
 		if ( Build.VERSION.SDK_INT >= 23 &&
@@ -131,6 +134,7 @@ public class Selectimage extends Activity {
 			return  ;
 		}
 		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, (LocationListener) locationListener);
+
 
 
 			//كود الايميل
@@ -159,6 +163,11 @@ public class Selectimage extends Activity {
 		if (requestCode == 0) {
 			if (resultCode == RESULT_OK) {
 				Bitmap th = (Bitmap) data.getExtras().get("data");
+				ByteArrayOutputStream baos = new ByteArrayOutputStream();
+				th.compress(Bitmap.CompressFormat.PNG, 100, baos); //bm is the bitmap object
+				byte[] b = baos.toByteArray();
+
+				String encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
 
 					photo.setImageBitmap(th);
 
