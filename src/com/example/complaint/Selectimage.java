@@ -35,7 +35,7 @@ public class Selectimage extends Activity {
 
 
 	ImageView photo;
-
+	GPSTracker gps;
 
 
 	@Override
@@ -126,66 +126,64 @@ public class Selectimage extends Activity {
 
 		//التحديث للموقع
 
-		LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-		MyCurrentLoctionListener locationListener = new MyCurrentLoctionListener();
-		if ( Build.VERSION.SDK_INT >= 23 &&
-				ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
-				ContextCompat.checkSelfPermission( this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-			return  ;
-		}
-		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, (LocationListener) locationListener);
+		gps = new GPSTracker(this);
 
+		// check if GPS enabled
+		if (gps.canGetLocation()) {
 
+			double latitude = gps.getLatitude();
+			double longitude = gps.getLongitude();
+
+			// \n is for new line
+			Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
+
+		}   else{
+		// can't get location
+		// GPS or Network is not enabled
+		// Ask user to enable GPS/network in settings
+		gps.showSettingsAlert();
+	}
 
 			//كود الايميل
-		String gmail = null;
+			String gmail = null;
 
-		Pattern gmailPattern = Patterns.EMAIL_ADDRESS;
-		Account[] accounts = AccountManager.get(this).getAccounts();
-		for (Account account : accounts) {
-			if (gmailPattern.matcher(account.name).matches()) {
-				gmail = account.name;
+			Pattern gmailPattern = Patterns.EMAIL_ADDRESS;
+			Account[] accounts = AccountManager.get(this).getAccounts();
+			for (Account account : accounts) {
+				if (gmailPattern.matcher(account.name).matches()) {
+					gmail = account.name;
+				}
 			}
-		}
 
-		Toast.makeText(this, gmail, Toast.LENGTH_LONG).show();
+			Toast.makeText(this, gmail, Toast.LENGTH_LONG).show();
+
 
 	}
 
+		//كود الكاميرا
+		@Override
+		protected void onActivityResult ( int requestCode, int resultCode, Intent data){
+			super.onActivityResult(requestCode, resultCode, data);
+			if (requestCode == 0) {
+				if (resultCode == RESULT_OK) {
+					Bitmap th = (Bitmap) data.getExtras().get("data");
+					ByteArrayOutputStream baos = new ByteArrayOutputStream();
+					th.compress(Bitmap.CompressFormat.PNG, 100, baos); //bm is the bitmap object
+					byte[] b = baos.toByteArray();
 
-
-
-
-	//كود الكاميرا
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-		if (requestCode == 0) {
-			if (resultCode == RESULT_OK) {
-				Bitmap th = (Bitmap) data.getExtras().get("data");
-				ByteArrayOutputStream baos = new ByteArrayOutputStream();
-				th.compress(Bitmap.CompressFormat.PNG, 100, baos); //bm is the bitmap object
-				byte[] b = baos.toByteArray();
-
-				String encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
+					String encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
 
 					photo.setImageBitmap(th);
 
 
+				} else if (resultCode == RESULT_CANCELED) {
 
-
-			} else if (resultCode == RESULT_CANCELED) {
+				}
 
 			}
 
+
 		}
-
-
-
-
-
-
-	}
 
 
 
@@ -195,3 +193,4 @@ public class Selectimage extends Activity {
 
 
 }
+
