@@ -30,4 +30,11 @@ public class MainActivity extends Activity {
 
     }
 
+    //الخروج من البرنامج عند ضغط زر العودة على الجهاز بدل من العودة للشاشة السابقة
+    @Override
+    public void onBackPressed()
+    {
+        moveTaskToBack(true);
+    }
+
 }
