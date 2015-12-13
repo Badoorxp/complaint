@@ -2,7 +2,6 @@ package com.example.complaint;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Process;
 import android.os.*;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,17 +9,16 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-import java.util.Properties;
-
 public class Finish extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_finish);
+
+		Button goback=(Button)findViewById(R.id.ret_main);
 		Button newcomp=(Button)findViewById(R.id.newcom);
-		Button goback=(Button)findViewById(R.id.exit);
-		Button exit=(Button)findViewById(R.id.send);
+		Button exit=(Button)findViewById(R.id.exit);
 
 		
 		newcomp.setOnClickListener(new OnClickListener(){
@@ -30,8 +28,6 @@ public class Finish extends Activity {
 				// TODO Auto-generated method stub
 				Intent i=new Intent(Finish.this,Newcomplaint2.class);
 				startActivity(i);
-				
-				
 			}
 			
 		});
@@ -43,30 +39,30 @@ public class Finish extends Activity {
 			// TODO Auto-generated method stub
 			Intent i = new Intent(Finish.this, MainActivity.class);
 			startActivity(i);
-
-
 		}
 
 	});
-    exit.setOnClickListener(new OnClickListener()
-	{
 
+
+		exit.setOnClickListener(new OnClickListener()
+	{
 		@Override
 		public void onClick(View view)
 		{
-			Intent intent = new Intent(Intent.ACTION_MAIN);
+			/*Intent intent = new Intent(Intent.ACTION_MAIN);
 			intent.addCategory(Intent.CATEGORY_HOME);
 			intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			startActivity(intent);
 			finish();
-			System.exit(0);
+			System.exit(0);*/
+			moveTaskToBack(true);
         }
     });
 }
 
 
 
-	@Override
+	/*@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.finish, menu);
@@ -83,5 +79,5 @@ public class Finish extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
-	}
+	}*/
 }
