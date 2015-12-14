@@ -96,17 +96,18 @@ public class Newcomplaint2 extends Activity {
 
                 if(!(AlpCheck(name1)))
                 {
-                    name.setError("الرجاء إدخال الاسم صحيحاً");
+                    name.setError("الرجاء إدخال الاسم صحيحاً بدون أرقام");
                     ok=false;
                 }
 
-                if(!(SpcCount(name1)==2)||!(SpcCount(name1)==3))
+                /*if(!(SpcCount(name1)==2)||!(SpcCount(name1)==3))
                 {
                     name.setError("الرجاء إدخال الاسم الثلاثي ");
                     ok=false;
-                }
+                }*/
 
-                if (!(phone1.length() == 10/*||phone1.length()==13*/))
+                String phoneS=phone1+"";
+                if (!(phoneS.length() == 10/*||phone1.length()==13*/))
                 {
                     phone.setError("الرجاء إدخال رقم الهاتف المكون من 10 خانات");
                     ok=false;
@@ -125,7 +126,7 @@ public class Newcomplaint2 extends Activity {
     public static boolean AlpCheck(String s) {
         boolean x = true;
         for (int i = 0; i < s.length(); i++) {
-            if (Character.isLetter(s.charAt(i)))
+            if ((Character.isLetter(s.charAt(i)))||(s.charAt(i)==' '))
             {
                 continue;
             }
@@ -149,6 +150,7 @@ public class Newcomplaint2 extends Activity {
         return (x);
     }
 }
+
 
 
 
