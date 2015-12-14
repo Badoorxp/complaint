@@ -87,27 +87,67 @@ public class Newcomplaint2 extends Activity {
                 i.putExtra("name", name1);
                 i.putExtra("details", details1);
                 i.putExtra("city", city1);
-                if (name1.length()!=0)
+                boolean ok=true;
 
-                    if (phone1.length()==10||phone1.length()==13 )
+                if (name1.length()==0) {
+                    name.setError("الرجاء إدخال الاسم");
+                    ok=false;
+                }
 
-                startActivity(i);
+                if(!(AlpCheck(name1)))
+                {
+                    name.setError("الرجاء إدخال الاسم صحيحاً");
+                    ok=false;
+                }
+
+                if(!(SpcCount(name1)==2)||!(SpcCount(name1)==3))
+                {
+                    name.setError("الرجاء إدخال الاسم الثلاثي ");
+                    ok=false;
+                }
+
+                if (!(phone1.length() == 10/*||phone1.length()==13*/))
+                {
+                    phone.setError("الرجاء إدخال رقم الهاتف المكون من 10 خانات");
+                    ok=false;
+                }
 
 
-                else Toast.makeText(getBaseContext(),"الرجاء ادخال رقم الهاتف بشكل صحيح",Toast.LENGTH_SHORT).show();
-                else Toast.makeText(getBaseContext(),"الرجاء ادخال الاسم",Toast.LENGTH_SHORT).show();
-
-
+                if(ok)
+                {
+                    startActivity(i);
+                    //Toast.makeText(getBaseContext(),"الرجاء ادخال الاسم",Toast.LENGTH_SHORT).show();
+                }
             }
         });
-
-
     }
 
+    public static boolean AlpCheck(String s) {
+        boolean x = true;
+        for (int i = 0; i < s.length(); i++) {
+            if (Character.isLetter(s.charAt(i)))
+            {
+                continue;
+            }
+            else
+            {
+                x = false;
+                break;
+            }
+        }
+        return (x);
+    }
 
-
-
-
+    public static int SpcCount(String s) {
+        int x = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i)==' ')
+            {
+                x++;
+            }
+        }
+        return (x);
+    }
 }
 
 
