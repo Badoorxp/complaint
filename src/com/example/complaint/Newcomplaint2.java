@@ -3,6 +3,7 @@ package com.example.complaint;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -26,7 +27,7 @@ import java.util.regex.Pattern;
 
 public class Newcomplaint2 extends Activity {
 
-
+    public static final String prefs = "MyAppPreferences";
 
 
 
@@ -100,11 +101,11 @@ public class Newcomplaint2 extends Activity {
                     ok=false;
                 }
 
-                /*if(!(SpcCount(name1)==2)||!(SpcCount(name1)==3))
+                if((SpcCount(name1)!=2))
                 {
-                    name.setError("الرجاء إدخال الاسم الثلاثي ");
+                    name.setError("الرجاء إدخال الاسم الثلاثي");
                     ok=false;
-                }*/
+                }
 
                 String phoneS=phone1+"";
                 if (!(phoneS.length() == 10/*||phone1.length()==13*/))
@@ -112,26 +113,28 @@ public class Newcomplaint2 extends Activity {
                     phone.setError("الرجاء إدخال رقم الهاتف المكون من 10 خانات");
                     ok=false;
                 }
+                SharedPreferences settingsfile= getSharedPreferences(prefs,0);
 
+                SharedPreferences.Editor myeditor = settingsfile.edit();
 
-                if(ok)
-                {
-                    startActivity(i);
-                    //Toast.makeText(getBaseContext(),"الرجاء ادخال الاسم",Toast.LENGTH_SHORT).show();
-                }
+                myeditor.putInt("phone", Integer.parseInt(phone1));
+                myeditor.putString("details", details1);
+                myeditor.putString("name", name1);
+
+                myeditor.commit();
+
+                startActivity(i);
             }
         });
     }
 
+
     public static boolean AlpCheck(String s) {
         boolean x = true;
         for (int i = 0; i < s.length(); i++) {
-            if ((Character.isLetter(s.charAt(i)))||(s.charAt(i)==' '))
-            {
+            if ((Character.isLetter(s.charAt(i))) || (s.charAt(i) == ' ')) {
                 continue;
-            }
-            else
-            {
+            } else {
                 x = false;
                 break;
             }

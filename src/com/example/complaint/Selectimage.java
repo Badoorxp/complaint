@@ -1,23 +1,17 @@
 package com.example.complaint;
 
 
-import android.Manifest;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.location.Location;
 import android.location.LocationListener;
-import android.location.LocationManager;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.content.ContextCompat;
 import android.telephony.TelephonyManager;
 import android.util.Base64;
 import android.util.Patterns;
@@ -31,12 +25,22 @@ import java.io.ByteArrayOutputStream;
 import java.util.regex.Pattern;
 
 
-public class Selectimage extends Activity {
+public class Selectimage extends Activity  {
 
 
 	ImageView photo;
 	GPSTracker gps;
 
+	final Intent info = this.getIntent();
+	String typecomp = info.getExtras().getString("typecomp");
+	String phone = info.getExtras().getString("phone");
+	String name = info.getExtras().getString("name");
+	String city = info.getExtras().getString("city");
+	String details = info.getExtras().getString("details");
+	String IMMEI;
+	String latitude;
+	String longitude;
+	String gmail;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,15 +53,6 @@ public class Selectimage extends Activity {
 		Button send = (Button) findViewById(R.id.send);
 		Button change = (Button) findViewById(R.id.newcom);
 		Button exit = (Button) findViewById(R.id.exit);
-
-		//عشان اجيب الداتا
-		final Intent info = this.getIntent();
-		String typecomp = info.getExtras().getString("typecomp");
-		String email = info.getExtras().getString("email");
-		String phone = info.getExtras().getString("phone");
-		String name = info.getExtras().getString("name");
-		String city = info.getExtras().getString("city");
-		String details = info.getExtras().getString("details");
 
 
 		//اكشن فتح الكاميرا
@@ -72,19 +67,7 @@ public class Selectimage extends Activity {
 		});
 
 
-		send.setOnClickListener(new OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent i = new Intent(Selectimage.this, Finish.class);
-
-				startActivity(i);
-
-
-			}
-
-		});
 
 		change.setOnClickListener(new OnClickListener() {
 
@@ -103,7 +86,7 @@ public class Selectimage extends Activity {
 
 		//كود التلفون
 		TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-		String IMMEI = telephonyManager.getDeviceId();
+		IMMEI = telephonyManager.getDeviceId();
 		Toast.makeText(getBaseContext(), IMMEI, Toast.LENGTH_SHORT).show();
 
 
@@ -131,8 +114,8 @@ public class Selectimage extends Activity {
 		// check if GPS enabled
 		if (gps.canGetLocation()) {
 
-			double latitude = gps.getLatitude();
-			double longitude = gps.getLongitude();
+			latitude = gps.getLatitude()+"";
+			longitude = gps.getLongitude()+"";
 
 			// \n is for new line
 			Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
@@ -145,7 +128,7 @@ public class Selectimage extends Activity {
 	}
 
 			//كود الايميل
-			String gmail = null;
+
 
 			Pattern gmailPattern = Patterns.EMAIL_ADDRESS;
 			Account[] accounts = AccountManager.get(this).getAccounts();
@@ -160,7 +143,21 @@ public class Selectimage extends Activity {
 
 	}
 
-		//كود الكاميرا
+
+	//on create end
+	public void senddata(View v)
+	{
+		String method = "upload";
+		BackgroundTask backgroundTask = new BackgroundTask(this);
+		backgroundTask.execute(method,typecomp,phone,name,city,details,IMMEI,latitude,longitude,gmail,encodedImage);
+
+		Intent i = new Intent(Selectimage.this, Finish.class);
+
+		startActivity(i);
+	}
+
+	//Camera Codes
+	String encodedImage;
 		@Override
 		protected void onActivityResult ( int requestCode, int resultCode, Intent data){
 			super.onActivityResult(requestCode, resultCode, data);
@@ -170,27 +167,14 @@ public class Selectimage extends Activity {
 					ByteArrayOutputStream baos = new ByteArrayOutputStream();
 					th.compress(Bitmap.CompressFormat.PNG, 100, baos); //bm is the bitmap object
 					byte[] b = baos.toByteArray();
-
-					String encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
-
+					 encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
 					photo.setImageBitmap(th);
-
-
-				} else if (resultCode == RESULT_CANCELED) {
+				}
+				else
+				if (resultCode == RESULT_CANCELED)
+				{
 
 				}
-
 			}
-
-
 		}
-
-
-
-
-
-
-
-
 }
-

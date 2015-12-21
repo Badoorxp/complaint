@@ -60,6 +60,12 @@ public class Finish extends Activity {
     });
 }
 
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		moveTaskToBack(true);
+		finish();
+	}
 
 
 	/*@Override

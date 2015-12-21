@@ -16,7 +16,7 @@
         <item name="android:shadowDx">1</item>
         <item name="android:shadowDy">1</item>
         <item name="android:shadowRadius">0.6</item>
-        <item name="android:background">@drawable/custom_btn_black_pearl</item>
+
         <item name="android:padding">10dip</item>
     </style>
 
