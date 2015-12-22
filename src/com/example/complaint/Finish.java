@@ -3,8 +3,6 @@ package com.example.complaint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.*;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -55,7 +53,7 @@ public class Finish extends Activity {
 			startActivity(intent);
 			finish();
 			System.exit(0);*/
-			moveTaskToBack(true);
+			onBackPressed();
         }
     });
 }
@@ -63,8 +61,9 @@ public class Finish extends Activity {
 	@Override
 	public void onBackPressed() {
 		super.onBackPressed();
-		moveTaskToBack(true);
-		finish();
+		this.finishAffinity();
+		//moveTaskToBack(true);
+		//System.exit(0);
 	}
 
 
