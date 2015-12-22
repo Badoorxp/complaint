@@ -28,7 +28,11 @@ import java.util.regex.Pattern;
 public class Newcomplaint2 extends Activity {
 
     public static final String prefs = "MyAppPreferences";
-
+    EditText name;
+    EditText phone;
+    Spinner city;
+    Spinner typecomp;
+    EditText details;
 
 
     @Override
@@ -36,12 +40,12 @@ public class Newcomplaint2 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newcomplaint2);
         //التعاريف
-        final EditText name = (EditText) findViewById(R.id.editText);
-        final EditText phone = (EditText) findViewById(R.id.editText2);
-        final Spinner city = (Spinner) findViewById(R.id.spinner);
-        final Spinner typecomp = (Spinner) findViewById(R.id.typecomp);
+        name = (EditText) findViewById(R.id.editText);
+        phone = (EditText) findViewById(R.id.editText2);
+        city = (Spinner) findViewById(R.id.spinner);
+        typecomp = (Spinner) findViewById(R.id.typecomp);
+        details = (EditText) findViewById(R.id.editText4);
 
-        final EditText details = (EditText) findViewById(R.id.editText4);
         Button next1 = (Button) findViewById(R.id.next1);
 
 
@@ -74,20 +78,19 @@ public class Newcomplaint2 extends Activity {
         next1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Newcomplaint2.this, Selectimage.class);
+                Intent i = new Intent(getApplicationContext(), Selectimage.class);
+
                 String name1 = name.getText().toString();
                 String phone1 = phone.getText().toString();
-
-                String details1 = details.getText().toString();
+                /*String details1 = details.getText().toString();
                 String city1 = city.getSelectedItem().toString();
-                String typecomp1 = typecomp.getSelectedItem().toString();
+                String typecomp1 = typecomp.getSelectedItem().toString();*/
 
-                i.putExtra("typecomp", typecomp1);
-
-                i.putExtra("phone", phone1);
-                i.putExtra("name", name1);
-                i.putExtra("details", details1);
-                i.putExtra("city", city1);
+                i.putExtra("typecomp", typecomp.getSelectedItemId()+"");
+                i.putExtra("phone", phone.getText().toString());
+                i.putExtra("name", name.getText().toString());
+                i.putExtra("details", details.getText().toString());
+                i.putExtra("city", city.getSelectedItemId()+"");
                 boolean ok=true;
 
                 if (name1.length()==0) {
@@ -113,21 +116,23 @@ public class Newcomplaint2 extends Activity {
                     phone.setError("الرجاء إدخال رقم الهاتف المكون من 10 خانات");
                     ok=false;
                 }
-                SharedPreferences settingsfile= getSharedPreferences(prefs,0);
 
-                SharedPreferences.Editor myeditor = settingsfile.edit();
 
-                myeditor.putInt("phone", Integer.parseInt(phone1));
-                myeditor.putString("details", details1);
-                myeditor.putString("name", name1);
+                if(ok)
+                {
+                    startActivity(i);
+                }
 
-                myeditor.commit();
-
-                startActivity(i);
             }
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i=new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(i);
+    }
 
     public static boolean AlpCheck(String s) {
         boolean x = true;
