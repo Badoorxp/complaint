@@ -32,7 +32,7 @@ public class Newcomplaint2 extends Activity {
     EditText phone;
     Spinner city;
     Spinner typecomp;
-    EditText details;
+    EditText extra;
 
 
     @Override
@@ -44,7 +44,7 @@ public class Newcomplaint2 extends Activity {
         phone = (EditText) findViewById(R.id.editText2);
         city = (Spinner) findViewById(R.id.spinner);
         typecomp = (Spinner) findViewById(R.id.typecomp);
-        details = (EditText) findViewById(R.id.editText4);
+        extra = (EditText) findViewById(R.id.editText4);
 
         Button next1 = (Button) findViewById(R.id.next1);
 
@@ -89,7 +89,7 @@ public class Newcomplaint2 extends Activity {
                 i.putExtra("typecomp", typecomp.getSelectedItemId()+"");
                 i.putExtra("phone", phone.getText().toString());
                 i.putExtra("name", name.getText().toString());
-                i.putExtra("details", details.getText().toString());
+                i.putExtra("extra", extra.getText().toString());
                 i.putExtra("city", city.getSelectedItemId()+"");
                 boolean ok=true;
 
