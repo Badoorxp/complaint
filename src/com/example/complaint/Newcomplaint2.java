@@ -27,7 +27,6 @@ import java.util.regex.Pattern;
 
 public class Newcomplaint2 extends Activity {
 
-    public static final String prefs = "MyAppPreferences";
     EditText name;
     EditText phone;
     Spinner city;
@@ -64,7 +63,7 @@ public class Newcomplaint2 extends Activity {
 
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.countries_array, android.R.layout.simple_spinner_item);
+                R.array.cities_array, android.R.layout.simple_spinner_item);
 // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 // Apply the adapter to the spinner
@@ -104,9 +103,9 @@ public class Newcomplaint2 extends Activity {
                     ok=false;
                 }
 
-                if((SpcCount(name1)!=2))
+                if((SpcCount(name1)!=2)||(SpcCount(name1)!=3))
                 {
-                    name.setError("الرجاء إدخال الاسم الثلاثي");
+                    name.setError("الرجاء إدخال الاسم الثلاثي و وضع عدد الفراغات صحيحاً");
                     ok=false;
                 }
 
