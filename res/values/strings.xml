@@ -23,7 +23,7 @@
     <string name="start_b1">شكوى جديدة</string>
     <string name="start_b2">شكاوي مطروحة</string>
 
-        <string-array name="countries_array">
+        <string-array name="cities_array">
             <item>عمان</item>
             <item>الزرقاء</item>
             <item>مادبا</item>
@@ -40,18 +40,11 @@
 
 
     <string-array name="type_complant">
-        <item>صحة</item>
-        <item>الزرقاء</item>
-        <item>مادبا</item>
-        <item>عجلون</item>
-        <item>جرش</item>
-        <item>السلط</item>
-        <item>العقبة</item>
-        <item>معان</item>
-        <item>الكرك</item>
-        <item>اربد</item>
-        <item>المفرق</item>
-        <item>الطفيلة</item>
+
+        <item>مياه</item>
+        <item>كهرباء</item>
+        <item>صرف صحي</item>
+        <item>اتصالات</item>
 
 
     </string-array>
