@@ -22,6 +22,7 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.io.DataOutputStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -33,7 +34,7 @@ public class Newcomplaint2 extends Activity {
     Spinner typecomp;
     EditText extra;
 
-
+    int count;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +52,7 @@ public class Newcomplaint2 extends Activity {
 
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
-                R.array.type_complant, android.R.layout.simple_spinner_item);
+                R.array.type_complaint, android.R.layout.simple_spinner_item);
 // Specify the layout to use when the list of choices appears
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 // Apply the adapter to the spinner
@@ -81,44 +82,48 @@ public class Newcomplaint2 extends Activity {
 
                 String name1 = name.getText().toString();
                 String phone1 = phone.getText().toString();
-                /*String details1 = details.getText().toString();
-                String city1 = city.getSelectedItem().toString();
-                String typecomp1 = typecomp.getSelectedItem().toString();*/
+                /*String details1 = details.getText().toString();*/
+                //String city1 = city.getSelectedItem().toString();
+                //String typecomp1 = typecomp.getSelectedItem().toString();
 
-                i.putExtra("typecomp", typecomp.getSelectedItemId()+"");
-                i.putExtra("phone", phone.getText().toString());
-                i.putExtra("name", name.getText().toString());
-                i.putExtra("extra", extra.getText().toString());
-                i.putExtra("city", city.getSelectedItemId()+"");
+
                 boolean ok=true;
 
                 if (name1.length()==0) {
-                    name.setError("الرجاء إدخال الاسم");
+                    name.setError(getString(R.string.name_empty));
                     ok=false;
                 }
 
                 if(!(AlpCheck(name1)))
                 {
-                    name.setError("الرجاء إدخال الاسم صحيحاً بدون أرقام");
+                    name.setError(getString(R.string.hasNum));
                     ok=false;
                 }
 
-                if((SpcCount(name1)!=2)||(SpcCount(name1)!=3))
+                int c=SpcCount(name1);
+                if((c!=2))
                 {
-                    name.setError("الرجاء إدخال الاسم الثلاثي و وضع عدد الفراغات صحيحاً");
+                    name.setError(getString(R.string.hasSpc));
                     ok=false;
                 }
 
                 String phoneS=phone1+"";
                 if (!(phoneS.length() == 10/*||phone1.length()==13*/))
                 {
-                    phone.setError("الرجاء إدخال رقم الهاتف المكون من 10 خانات");
+                    phone.setError(getString(R.string.shortNum));
                     ok=false;
                 }
 
 
                 if(ok)
                 {
+
+
+                    i.putExtra("typecomp", typecomp.getSelectedItemPosition()+"");
+                    i.putExtra("phone", phone.getText().toString());
+                    i.putExtra("name", name.getText().toString());
+                    i.putExtra("extra", extra.getText().toString());
+                    i.putExtra("city", city.getSelectedItemPosition()+"");
                     startActivity(i);
                 }
 

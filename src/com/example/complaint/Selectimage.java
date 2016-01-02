@@ -55,7 +55,7 @@ public class Selectimage extends Activity  {
 	String latitude;
 	String longitude;
 	String gmail;
-
+	Intent NewCom;
 	List<NameValuePair> nV;
 	InputStream is;
 
@@ -65,7 +65,7 @@ public class Selectimage extends Activity  {
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_selectimage);
-		Intent NewCom = getIntent();
+		 NewCom= getIntent();
 		typecomp = NewCom.getStringExtra("typecomp");
 		phone= NewCom.getStringExtra("phone");
 		name = NewCom.getStringExtra("name");
@@ -73,12 +73,15 @@ public class Selectimage extends Activity  {
 		extra = NewCom.getStringExtra("extra");
 
 
+		Toast.makeText(getBaseContext(), city, Toast.LENGTH_SHORT).show();
+		Toast.makeText(getBaseContext(), typecomp, Toast.LENGTH_SHORT).show();
+
 		StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(threadPolicy);
 		//كود التلفون
 		TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
 		IMEI = telephonyManager.getDeviceId();
-		//Toast.makeText(getBaseContext(), IMMEI, Toast.LENGTH_SHORT).show();
+		//Toast.makeText(getBaseContext(), IMEI, Toast.LENGTH_SHORT).show();
 
 /*
 		//mac address
@@ -114,8 +117,6 @@ public class Selectimage extends Activity  {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				onBackPressed();
-				/*Intent i = new Intent(Selectimage.this, Newcomplaint2.class);
-				(i);*/
 			}
 		});
 
@@ -172,25 +173,26 @@ public class Selectimage extends Activity  {
 			public void onClick(View view)
 			{
 				is=null;
-				nV=new ArrayList<NameValuePair>(1);
+				nV=new ArrayList<NameValuePair>(3);
 				nV.add(new BasicNameValuePair("typecomp",typecomp));
 				nV.add(new BasicNameValuePair("city",city));
 				nV.add(new BasicNameValuePair("extra",extra));
 				nV.add(new BasicNameValuePair("longitude",longitude));
 				nV.add(new BasicNameValuePair("latitude",latitude));
+				nV.add(new BasicNameValuePair("photo",encodedPhoto));
 
-
+				nV.add(new BasicNameValuePair("imei", IMEI));
 				nV.add(new BasicNameValuePair("name",name));
 				nV.add(new BasicNameValuePair("email",gmail));
 				nV.add(new BasicNameValuePair("phone",phone));
-				nV.add(new BasicNameValuePair("imei", IMEI));
+
 
 				try{
 					//Default http
 					HttpClient hC=new DefaultHttpClient();
 
 					//Setting POST
-					HttpPost hP=new HttpPost("http://192.168.1.4/new1.php");
+					HttpPost hP=new HttpPost("http://192.168.43.116/android-webservice.php");
 
 
 					hP.setEntity(new UrlEncodedFormEntity(nV));
@@ -205,8 +207,8 @@ public class Selectimage extends Activity  {
 					is=en.getContent();
 
 					//Toast to check
-					String msg= "Success";
-					Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
+
 					Intent i=new Intent(getApplicationContext(),Finish.class);
 					startActivity(i);
 
@@ -236,18 +238,6 @@ public class Selectimage extends Activity  {
 
 	//on create end
 
-	/*
-	public void senddata(View v)
-	{
-		String method = "upload";
-		//BackgroundTask backgroundTask = new BackgroundTask(this);
-		//backgroundTask.execute(method,typecomp,phone,name,city,details,IMMEI,latitude,longitude,gmail,encodedPhoto);
-
-		Intent i = new Intent(Selectimage.this, Finish.class);
-
-		startActivity(i);
-	}
-	*/
 
 	//Camera Codes
 
@@ -266,7 +256,7 @@ public class Selectimage extends Activity  {
 				else
 				if (resultCode == RESULT_CANCELED)
 				{
-					//Toast.makeText(getApplicationContext(),"Unable to get Image",Toast.LENGTH_LONG).show();
+					Toast.makeText(getApplicationContext(),"Unable to get Image",Toast.LENGTH_LONG).show();
 				}
 			}
 		}

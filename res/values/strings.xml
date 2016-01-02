@@ -39,7 +39,7 @@
         </string-array>
 
     <string name="name_empty">الرجاء إدخال الاسم</string>>
-    <string-array name="type_complant">
+    <string-array name="type_complaint">
 
         <item>مياه</item>
         <item>كهرباء</item>
