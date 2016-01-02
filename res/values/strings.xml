@@ -38,13 +38,13 @@
             <item>الطفيلة</item>
         </string-array>
 
-
+    <string name="name_empty">الرجاء إدخال الاسم</string>>
     <string-array name="type_complant">
 
         <item>مياه</item>
         <item>كهرباء</item>
         <item>صرف صحي</item>
-        <item>اتصالات</item>
+        <item>طرق</item>
 
 
     </string-array>
@@ -52,5 +52,10 @@
 
     <string name="title_activity_main">نظام الشكاوي الالكتروني</string>
     <string name="title_activity_newcomplaint2">متابعة التسجيل</string>
+    <string name="title_activity_view_old">view_old</string>
+    <string name="title_activity_confirm">Confirm</string>
+    <string name="hasNum">الرجاء إدخال الاسم صحيحاً بدون أرقام</string>
+    <string name="hasSpc">الرجاء إدخال الاسم الثلاثي و وضع عدد الفراغات صحيحاً</string>
+    <string name="shortNum">الرجاء إدخال رقم الهاتف المكون من 10 خانات</string>
     </resources>
 
