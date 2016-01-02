@@ -181,11 +181,11 @@ public class Selectimage extends Activity  {
 				nV.add(new BasicNameValuePair("latitude",latitude));
 				nV.add(new BasicNameValuePair("photo",encodedPhoto));
 
-				nV.add(new BasicNameValuePair("imei", IMEI));
+
 				nV.add(new BasicNameValuePair("name",name));
 				nV.add(new BasicNameValuePair("email",gmail));
 				nV.add(new BasicNameValuePair("phone",phone));
-
+				nV.add(new BasicNameValuePair("imei", IMEI));
 
 				try{
 					//Default http
