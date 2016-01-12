@@ -42,6 +42,7 @@ public class Selectimage extends Activity  {
 
 
 	ImageView photo;
+	byte[] b;
 	GPSTracker gps;
 
 	String encodedPhoto;
@@ -73,8 +74,7 @@ public class Selectimage extends Activity  {
 		extra = NewCom.getStringExtra("extra");
 
 
-		Toast.makeText(getBaseContext(), city, Toast.LENGTH_SHORT).show();
-		Toast.makeText(getBaseContext(), typecomp, Toast.LENGTH_SHORT).show();
+
 
 		StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(threadPolicy);
@@ -144,15 +144,16 @@ public class Selectimage extends Activity  {
 			latitude = gps.getLatitude()+"";
 			longitude = gps.getLongitude()+"";
 
-			// \n is for new line
-			Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_SHORT).show();
 
-		}   else{
+
+		}
+		else
+		{
 		// can't get location
 		// GPS or Network is not enabled
 		// Ask user to enable GPS/network in settings
-		gps.showSettingsAlert();
-	}
+			gps.showSettingsAlert();
+		}
 
 			//كود الايميل
 
@@ -164,7 +165,7 @@ public class Selectimage extends Activity  {
 				}
 			}
 
-			Toast.makeText(this, gmail, Toast.LENGTH_SHORT).show();
+
 
 
 
@@ -173,9 +174,9 @@ public class Selectimage extends Activity  {
 			public void onClick(View view)
 			{
 				is=null;
-				nV=new ArrayList<NameValuePair>(3);
+				nV=new ArrayList<NameValuePair>(10);
 				nV.add(new BasicNameValuePair("typecomp",typecomp));
-				nV.add(new BasicNameValuePair("city",city));
+				nV.add(new BasicNameValuePair("city",""+city));
 				nV.add(new BasicNameValuePair("extra",extra));
 				nV.add(new BasicNameValuePair("longitude",longitude));
 				nV.add(new BasicNameValuePair("latitude",latitude));
@@ -193,9 +194,7 @@ public class Selectimage extends Activity  {
 
 					//Setting POST
 					HttpPost hP=new HttpPost("http://192.168.43.116/android-webservice.php");
-
-
-					hP.setEntity(new UrlEncodedFormEntity(nV));
+					hP.setEntity(new UrlEncodedFormEntity(nV,"UTF-8"));
 
 					//Getting response
 					HttpResponse r=hC.execute(hP);
@@ -207,7 +206,7 @@ public class Selectimage extends Activity  {
 					is=en.getContent();
 
 					//Toast to check
-					Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(), "تمت العملية بنجاح", Toast.LENGTH_SHORT).show();
 
 					Intent i=new Intent(getApplicationContext(),Finish.class);
 					startActivity(i);
@@ -248,9 +247,9 @@ public class Selectimage extends Activity  {
 				if (resultCode == RESULT_OK) {
 					Bitmap th = (Bitmap) data.getExtras().get("data");
 					ByteArrayOutputStream baos = new ByteArrayOutputStream();
-					th.compress(Bitmap.CompressFormat.PNG, 100, baos); //bm is the bitmap object
-					byte[] b = baos.toByteArray();
-					 encodedPhoto = Base64.encodeToString(b, Base64.DEFAULT);
+					th.compress(Bitmap.CompressFormat.JPEG, 100, baos); //bm is the bitmap object
+					b = baos.toByteArray();
+					encodedPhoto = Base64.encodeToString(b, Base64.DEFAULT);
 					photo.setImageBitmap(th);
 				}
 				else
