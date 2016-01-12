@@ -1,30 +1,20 @@
 package com.example.complaint;
 
-import android.app.SearchManager;
-import android.content.Context;
+
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.net.wifi.WifiInfo;
-import android.net.wifi.WifiManager;
+
 import android.os.Bundle;
 import android.app.Activity;
-import android.util.Log;
+
 import android.view.View;
-import android.widget.AdapterView;
+
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Spinner;
-import android.widget.Toast;
 
-import java.io.DataOutputStream;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
+import android.widget.Spinner;
+
 
 public class Newcomplaint2 extends Activity {
 
@@ -34,12 +24,11 @@ public class Newcomplaint2 extends Activity {
     Spinner typecomp;
     EditText extra;
 
-    int count;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newcomplaint2);
-        //التعاريف
+
         name = (EditText) findViewById(R.id.editText);
         phone = (EditText) findViewById(R.id.editText2);
         city = (Spinner) findViewById(R.id.spinner);
@@ -62,12 +51,11 @@ public class Newcomplaint2 extends Activity {
 
 
 
-// Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.cities_array, android.R.layout.simple_spinner_item);
-// Specify the layout to use when the list of choices appears
+
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-// Apply the adapter to the spinner
+
         city.setAdapter(adapter);
 
 
@@ -82,9 +70,7 @@ public class Newcomplaint2 extends Activity {
 
                 String name1 = name.getText().toString();
                 String phone1 = phone.getText().toString();
-                /*String details1 = details.getText().toString();*/
-                //String city1 = city.getSelectedItem().toString();
-                //String typecomp1 = typecomp.getSelectedItem().toString();
+
 
 
                 boolean ok=true;
@@ -119,11 +105,12 @@ public class Newcomplaint2 extends Activity {
                 {
 
 
-                    i.putExtra("typecomp", typecomp.getSelectedItemPosition()+"");
+                    i.putExtra("typecomp", Integer.toString(typecomp.getSelectedItemPosition()));
+                    //Toast.makeText(getBaseContext(), Integer.toString(typecomp.getSelectedItemPosition()), Toast.LENGTH_SHORT).show();
                     i.putExtra("phone", phone.getText().toString());
                     i.putExtra("name", name.getText().toString());
                     i.putExtra("extra", extra.getText().toString());
-                    i.putExtra("city", city.getSelectedItemPosition()+"");
+                    i.putExtra("city", Integer.toString(city.getSelectedItemPosition()));
                     startActivity(i);
                 }
 
